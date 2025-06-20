@@ -86,19 +86,6 @@ $social_media_links = $get_general_fields['social_links'];
             </div>
         </div>
         <div class="row pb-3">
-            <div class="col-lg-6 col-12 d-flex justify-content-start py-3">
-                <a href="#">
-                    <img class="d-block bell" style="width: 30px;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/bell-dark.svg" alt="subscribe">
-                </a>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="d-flex justify-content-start text-right">
-                    <p>تابعوا قناة نقد على يوتيوب</p>
-                    <a class="button-green" href="#">
-                        الاشتراك
-                    </a>
-                </div>
-            </div>
             <div class="col-12 pb-4">
                 <ul class="footer-tags">
                     <li>
@@ -137,6 +124,19 @@ $social_media_links = $get_general_fields['social_links'];
                         </a>
                     </li>
                 </ul>
+            </div>
+            <div class="col-lg-6 col-12 d-flex justify-content-start py-3">
+                <a href="#">
+                    <img class="d-block bell" style="width: 30px;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/bell-dark.svg" alt="subscribe">
+                </a>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="d-flex justify-content-start text-right">
+                    <a class="button-green" href="#">
+                        الاشتراك
+                    </a>
+                    <p>تابعوا قناة نقد على يوتيوب</p>
+                </div>
             </div>
         </div>
     </div>
