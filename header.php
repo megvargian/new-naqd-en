@@ -77,13 +77,6 @@ $all_tags = get_tags( array(
 			<div class="container-fluid px-4">
 				<div class="row">
 					<div class="col d-flex justify-content-end align-items-center">
-						<label class="switch">
-							<input type="checkbox" id="changeTheme">
-							<span class="slider">
-								<span class="label-text EN helvetica-regular">En</span>
-								<span class="label-text AR d-none helvetica-regular">Ar</span>
-							</span>
-						</label>
 						<button class="hamburger hamburger--collapse" type="button">
 							<div class="menu_mobile_nav">
 								<div class="hamburger_menu_icon">
@@ -93,6 +86,13 @@ $all_tags = get_tags( array(
 								</div>
 							</div>
 						</button>
+						<label class="switch">
+							<input type="checkbox" id="changeTheme">
+							<span class="slider">
+								<span class="label-text EN helvetica-regular">En</span>
+								<span class="label-text AR d-none helvetica-regular">Ar</span>
+							</span>
+						</label>
 					</div>
 					<div class="col-9 justify-content-<?php echo is_page('search-articles') || is_page('videos') ? 'start' : 'center';  ?> d-lg-flex d-none align-items-center">
 						<div class="d-block">
