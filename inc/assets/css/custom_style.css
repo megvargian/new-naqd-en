@@ -80,7 +80,7 @@ input:focus, textarea:focus, select:focus, option:focus {
 }
 body {
   overflow-x: hidden !important;
-  direction: rtl;
+  direction: ltr;
   width: 100%;
   font-family: "ManchetteFine-Regular";
   background-color: #2A2A2E;
@@ -120,7 +120,7 @@ h2 {
   font-size: 2rem;
   color: #fff;
   font-family: "ManchetteFine-Regular";
-  text-align: right;
+  text-align: left;
 }
 
 p {
@@ -229,7 +229,7 @@ p {
 .most-read-articles ul li h3 {
   color: #000;
   font-size: 2.5rem;
-  text-align: right;
+  text-align: left;
 }
 .most-read-articles ul li .author {
   font-size: 0.9rem;
@@ -305,7 +305,7 @@ p {
   max-width: 400px;
   height: auto;
   background-color: transparent;
-  text-align: right;
+  text-align: left;
   color: #fff;
   display: flex;
   justify-content: start;
@@ -316,13 +316,13 @@ p {
 .rassif-section .rassif-description h2 {
   font-size: 3rem;
   font-family: "ManchetteFine-Bold";
-  text-align: right;
+  text-align: left;
 }
 .rassif-section .rassif-description p {
   font-size: 1.2rem;
   color: #fff;
   font-family: "ManchetteFine-Regular";
-  text-align: right;
+  text-align: left;
 }
 .rassif-section .rassif-description a {
   background-color: #FF6F00;
@@ -332,7 +332,7 @@ p {
   padding: 0.35rem 2.5rem;
   border: none;
   outline: none;
-  text-align: right;
+  text-align: left;
 }
 
 .rassif-section {
@@ -367,7 +367,7 @@ p {
   width: 100%;
   padding: 0.3rem 0.5rem;
   direction: rtl;
-  text-align: right;
+  text-align: left;
 }
 .search-form input::placeholder {
   color: #fff;
@@ -467,7 +467,7 @@ p {
   transform: translateX(-100vw);
   transition: cubic-bezier(0.32, 0.17, 0, 1) 1s;
   background-color: #5D0EE6;
-  text-align: right;
+  text-align: left;
   font-size: 20px;
   text-align: center;
   z-index: 10;
@@ -645,7 +645,7 @@ p {
 .homepage .bg-color-green p {
   font-family: "Bressay-Regular";
   font-size: 1.3rem;
-  text-align: right;
+  text-align: left;
   margin-bottom: 1.5rem;
 }
 .homepage .bg-color-green .lower-part a {
@@ -653,7 +653,7 @@ p {
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
-  text-align: right;
+  text-align: left;
 }
 .homepage .bg-color-green .lower-part p {
   font-family: "Helvetica-Regular";
@@ -730,7 +730,7 @@ p {
 .homepage .most-read-articles ul li h3 {
   color: #000;
   font-size: 2.5rem;
-  text-align: right;
+  text-align: left;
 }
 .homepage .most-read-articles ul li .author {
   font-size: 0.9rem;
@@ -787,7 +787,7 @@ p {
   color: #000;
   font-size: 1rem;
   margin-left: 7px;
-  text-align: right;
+  text-align: left;
   margin-bottom: 0;
   width: 100%;
 }
@@ -820,7 +820,7 @@ footer .footer-tags li a {
   font-family: "ManchetteFine-Bold";
   color: #fff;
   font-size: 2rem;
-  text-align: right;
+  text-align: left;
 }
 footer .footer-tags li:last-child {
   border-left: none;
@@ -843,7 +843,7 @@ footer p {
   font-family: "Bressay-Regular";
   color: #fff;
   font-size: 1.4rem;
-  text-align: right;
+  text-align: left;
 }
 footer .border-green {
   width: 100%;
@@ -908,7 +908,7 @@ footer .border-green {
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
-  text-align: right;
+  text-align: left;
 }
 .single-product-page .lower-part p {
   font-family: "Bressay-Regular";
@@ -945,7 +945,7 @@ footer .border-green {
 .single-product-page .related-articles .most-read-articles h2 {
   font-size: 3.5rem;
   color: #fff;
-  text-align: right;
+  text-align: left;
   font-family: "ManchetteFine-Bold";
 }
 .single-product-page .related-articles .most-read-articles ul {
@@ -964,7 +964,7 @@ footer .border-green {
 .single-product-page .related-articles .most-read-articles ul li h3 {
   color: #fff;
   font-size: 1.7rem;
-  text-align: right;
+  text-align: left;
   font-family: "ManchetteFine-Bold";
 }
 .single-product-page .related-articles .most-read-articles ul li .author {
@@ -1014,7 +1014,7 @@ footer .border-green {
 }
 
 .about-and-contact-us {
-  text-align: right;
+  text-align: left;
   color: #fff;
 }
 .about-and-contact-us h1 {
@@ -1028,7 +1028,7 @@ footer .border-green {
 }
 .about-and-contact-us h2 {
   font-size: 2rem;
-  text-align: right;
+  text-align: left;
   font-family: "ManchetteFine-Bold";
   color: #B6E60D;
   margin-bottom: 1.5rem;
@@ -1039,7 +1039,7 @@ footer .border-green {
 .about-and-contact-us p {
   color: #fff;
   font-size: 1.5rem;
-  text-align: right;
+  text-align: left;
   font-family: "Bressay-Regular";
   margin-bottom: 1.5rem;
 }
@@ -1068,7 +1068,7 @@ footer .border-green {
   margin-bottom: 20px;
   color: #000;
   width: 100%;
-  text-align: right;
+  text-align: left;
 }
 .about-and-contact-us .contact-us input::placeholder, .about-and-contact-us .contact-us textarea::placeholder {
   color: #252525;
@@ -1079,7 +1079,7 @@ footer .border-green {
   color: #000;
   font-size: 1.3rem;
   border-radius: 20px;
-  text-align: right;
+  text-align: left;
   margin: auto;
   width: fit-content;
   border: none;
@@ -1091,11 +1091,11 @@ footer .border-green {
 }
 
 .personal-info {
-  text-align: right;
+  text-align: left;
 }
 .personal-info h2 {
   font-size: 2rem;
-  text-align: right;
+  text-align: left;
   font-family: "ManchetteFine-Bold";
   color: #B6E60D;
   margin-bottom: 1.5rem;
@@ -1103,7 +1103,7 @@ footer .border-green {
 .personal-info p {
   color: #fff;
   font-size: 1.5rem;
-  text-align: right;
+  text-align: left;
   font-family: "Bressay-Regular";
   margin-bottom: 1.5rem;
 }
@@ -1122,7 +1122,7 @@ footer .border-green {
   margin-bottom: 20px;
   color: #000;
   width: 100%;
-  text-align: right;
+  text-align: left;
 }
 .personal-info .wpcf7-list-item {
   justify-content: start;
@@ -1148,7 +1148,7 @@ footer .border-green {
   color: #000;
   font-size: 1.3rem;
   border-radius: 20px;
-  text-align: right;
+  text-align: left;
   margin: auto;
   width: fit-content;
   border: none;
@@ -1487,7 +1487,7 @@ body.dark {
   color: #000;
   font-size: 1.2rem;
   direction: rtl;
-  text-align: right;
+  text-align: left;
   margin-bottom: 0;
   width: 100%;
 }
