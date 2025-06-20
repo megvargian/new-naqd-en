@@ -131,7 +131,7 @@ $social_media_links = $get_general_fields['social_links'];
                 </a>
             </div>
             <div class="col-lg-6 col-12">
-                <div class="d-flex justify-content-start text-right">
+                <div class="d-flex justify-content-end text-right">
                     <a class="button-green" href="#">
                         الاشتراك
                     </a>
