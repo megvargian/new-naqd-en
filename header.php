@@ -76,10 +76,23 @@ $all_tags = get_tags( array(
 		<nav>
 			<div class="container-fluid px-4">
 				<div class="row">
-					<div class="col d-flex justify-content-start">
-						<a href="<?php echo home_url(); ?>">
-							<img id="logo" class="logo d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
-						</a>
+					<div class="col d-flex justify-content-end align-items-center">
+						<label class="switch">
+							<input type="checkbox" id="changeTheme">
+							<span class="slider">
+								<span class="label-text EN helvetica-regular">En</span>
+								<span class="label-text AR d-none helvetica-regular">Ar</span>
+							</span>
+						</label>
+						<button class="hamburger hamburger--collapse" type="button">
+							<div class="menu_mobile_nav">
+								<div class="hamburger_menu_icon">
+									<div class="line"></div>
+									<div class="line middle_line"></div>
+									<div class="line"></div>
+								</div>
+							</div>
+						</button>
 					</div>
 					<div class="col-9 justify-content-<?php echo is_page('search-articles') || is_page('videos') ? 'start' : 'center';  ?> d-lg-flex d-none align-items-center">
 						<div class="d-block">
@@ -156,42 +169,12 @@ $all_tags = get_tags( array(
 							<?php } ?>
 						</div>
 					</div>
-					<div class="col d-flex justify-content-end align-items-center">
-						<label class="switch">
-							<input type="checkbox" id="changeTheme">
-							<span class="slider">
-								<span class="label-text EN helvetica-regular">En</span>
-								<span class="label-text AR d-none helvetica-regular">Ar</span>
-							</span>
-						</label>
-						<button class="hamburger hamburger--collapse" type="button">
-							<div class="menu_mobile_nav">
-								<div class="hamburger_menu_icon">
-									<div class="line"></div>
-									<div class="line middle_line"></div>
-									<div class="line"></div>
-								</div>
-							</div>
-						</button>
+					<div class="col d-flex justify-content-start">
+						<a href="<?php echo home_url(); ?>">
+							<img id="logo" class="logo d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
+						</a>
 					</div>
 				</div>
-				<!-- <div class="row justify-content-center d-lg-flex d-none">
-					<div class="col-10">
-						<nav>
-							<ul class="d-flex justify-content-center align-items-center tag-list">
-								<?php
-									//foreach ( $tags as $tag ) {
-								?>
-										<li>
-											<button class="single-tag tag-<?php //echo $tag->term_id ?>" data-tagId="<?php // echo $tag->term_id ?>">
-												<?php // echo esc_html( $tag->name ); ?>
-											</button>
-										</li>
-								<?php // } ?>
-							</ul>
-						</nav>
-					</div>
-				</div> -->
 			</div>
 			<div id="menu_mobile" class="menu_on_mobile">
 				<div class="menu_on_mobile_wrapper">
