@@ -76,7 +76,7 @@ $all_tags = get_tags( array(
 		<nav>
 			<div class="container-fluid px-4">
 				<div class="row">
-					<div class="col d-flex justify-content-end align-items-center">
+					<div class="col d-flex justify-content-start align-items-center">
 						<button class="hamburger hamburger--collapse" type="button">
 							<div class="menu_mobile_nav">
 								<div class="hamburger_menu_icon">
@@ -169,7 +169,7 @@ $all_tags = get_tags( array(
 							<?php } ?>
 						</div>
 					</div>
-					<div class="col d-flex justify-content-start">
+					<div class="col d-flex justify-content-end">
 						<a href="<?php echo home_url(); ?>">
 							<img id="logo" class="logo d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
 						</a>
