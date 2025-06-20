@@ -14,19 +14,14 @@ $social_media_links = $get_general_fields['social_links'];
 <footer class="pt-5">
     <div class="container">
         <div class="row pb-3">
-            <div class="col-12 d-flex justify-content-start">
+            <div class="col-12 d-flex justify-content-end">
                 <div id="scrollToTop" style="cursor: pointer;">
                     <img class="arrow-up" style="width: 35px;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/arrow-up-dark.svg" alt="arrow-up">
                 </div>
             </div>
         </div>
         <div class="row justify-content-between pb-4">
-            <div class="col-lg-1 col-4">
-                <a href="<?php echo home_url(); ?>">
-                    <img id="naqd_footer" class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
-                </a>
-            </div>
-            <div class="col-lg-5 col-12 justify-content-end d-flex align-items-center">
+            <div class="col-lg-5 col-12 justify-content-start d-flex align-items-center">
                 <ul class="social-media-icons">
                     <li class="mx-1">
                         <a href="<?php echo $social_media_links['insta']; ?>" class="single-social-icon">
@@ -84,8 +79,26 @@ $social_media_links = $get_general_fields['social_links'];
                     </li>
                 </ul>
             </div>
+            <div class="col-lg-1 col-4">
+                <a href="<?php echo home_url(); ?>">
+                    <img id="naqd_footer" class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
+                </a>
+            </div>
         </div>
         <div class="row pb-3">
+            <div class="col-lg-6 col-12 d-flex justify-content-start py-3">
+                <a href="#">
+                    <img class="d-block bell" style="width: 30px;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/bell-dark.svg" alt="subscribe">
+                </a>
+            </div>
+            <div class="col-lg-6 col-12">
+                <div class="d-flex justify-content-start text-right">
+                    <p>تابعوا قناة نقد على يوتيوب</p>
+                    <a class="button-green" href="#">
+                        الاشتراك
+                    </a>
+                </div>
+            </div>
             <div class="col-12 pb-4">
                 <ul class="footer-tags">
                     <li>
@@ -124,19 +137,6 @@ $social_media_links = $get_general_fields['social_links'];
                         </a>
                     </li>
                 </ul>
-            </div>
-            <div class="col-lg-6 col-12">
-                <div class="d-flex justify-content-start text-right">
-                    <p>تابعوا قناة نقد على يوتيوب</p>
-                    <a class="button-green" href="#">
-                        الاشتراك
-                    </a>
-                </div>
-            </div>
-            <div class="col-lg-6 col-12 d-flex justify-content-end py-3">
-                <a href="#">
-                    <img class="d-block bell" style="width: 30px;" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/bell-dark.svg" alt="subscribe">
-                </a>
             </div>
         </div>
     </div>
