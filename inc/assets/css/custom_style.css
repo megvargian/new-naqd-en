@@ -1294,14 +1294,14 @@ footer .border-green {
   height: 30px;
   text-align: center;
   border-radius: 50%;
-  left: -6%;
+  left: 30px;
   top: -40%;
   transition: left 0.4s;
 }
 
 /* Move knob when checked */
 .switch input:checked + .slider .label-text {
-  left: 30px;
+  left: -6%;
 }
 
 .light-theme {

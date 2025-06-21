@@ -97,7 +97,7 @@ $all_tags = get_tags( array(
 							</span>
 						</label>
 					</div>
-					<div class="col-9 justify-content-<?php echo is_page('search-articles') || is_page('videos') ? 'start' : 'center';  ?> d-lg-flex d-none align-items-center">
+					<div class="col-9 justify-content-<?php echo is_page('search-articles') || is_page('videos') ? 'end' : 'center';  ?> d-lg-flex d-none align-items-center">
 						<div class="d-block">
 							<ul class="social-media-icons">
 								<li class="mx-1">
