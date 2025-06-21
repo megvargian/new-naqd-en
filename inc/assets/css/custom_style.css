@@ -823,10 +823,10 @@ footer .footer-tags li a {
   text-align: left;
 }
 footer .footer-tags li:last-child {
-  border-left: none;
+  border-right: none;
 }
 footer .footer-tags li:first-child {
-  padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 footer .button-green {
   border-radius: 15px;
