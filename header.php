@@ -11,6 +11,9 @@
 $get_general_fields = get_fields('options');
 $tags = $get_general_fields['tags'];
 $social_media_links = $get_general_fields['social_links'];
+$main_menu = $get_general_fields['main_menu'];
+$main_menu_part_one = array_slice($main_menu, 0, 4);
+$main_menu_part_two = array_slice($main_menu, 4, 3);
 // get all cats and tags
 // $all_categories = get_categories( array(
 //     'hide_empty' => false, // Set to true to exclude empty categories
@@ -222,44 +225,23 @@ $all_tags = get_tags( array(
 						</div>
 						<div>
 							<ul>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/category/أقلًا-منا/">
-										أقلًا منا
-									</a>
-								</li>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/category/منشورات/">
-										منشورات
-									</a>
-								</li>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/videos/">
-										شاهد
-									</a>
-								</li>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/category/نشرة-نقد/">
-										نشرة نقد
-									</a>
-								</li>
+								<?php foreach ($main_menu_part_one as $key => $menu_item) {?>
+									<li>
+										<a class="d-block page_font animated_menu_el" href="<?php echo $menu_item['url']; ?>">
+											<?php echo $menu_item['text']; ?>
+										</a>
+									</li>
+								<?php } ?>
 							</ul>
 							<div class="green-border"></div>
 							<ul>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/personal-info">
-										اكتبوا معنا
-									</a>
-								</li>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/about-and-contact-us">
-										عن نقد
-									</a>
-								</li>
-								<li>
-									<a class="d-block page_font animated_menu_el" href="/about-and-contact-us#contact-us">
-										اتصلوا بنا
-									</a>
-								</li>
+								<?php foreach ($main_menu_part_two as $key => $menu_item) {?>
+									<li>
+										<a class="d-block page_font animated_menu_el" href="<?php echo $menu_item['url']; ?>">
+											<?php echo $menu_item['text']; ?>
+										</a>
+									</li>
+								<?php } ?>
 							</ul>
 							<ul class="social-media-icons pt-3">
 								<li class="mx-1">

@@ -10,6 +10,7 @@
  */
 $get_general_fields = get_fields('options');
 $social_media_links = $get_general_fields['social_links'];
+$main_menu = $get_general_fields['main_menu'];
 ?>
 <footer class="pt-5">
     <div class="container">
@@ -88,41 +89,13 @@ $social_media_links = $get_general_fields['social_links'];
         <div class="row pb-3">
             <div class="col-12 pb-4">
                 <ul class="footer-tags">
-                    <li>
-                        <a href="/category/أقلًا-منا/">
-                            أقلامنا
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/category/لبنان/">
-                            ملفات
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/category/لبنان/">
-                            مجتمع
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/videos/">
-                            شاهد
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/personal-info">
-                            اكتبوا معنا
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about-and-contact-us">
-                            عن نقد
-                        </a>
-                    </li>
-                    <li>
-                        <a href="/about-and-contact-us#contact-us">
-                            اتصلوا بنا
-                        </a>
-                    </li>
+                    <?php foreach ($main_menu as $key => $menu_item) {?>
+                        <li>
+                            <a href="<?php echo $menu_item['url']; ?>">
+                                <?php echo $menu_item['text']; ?>
+                            </a>
+                        </li>
+                    <?php } ?>
                 </ul>
             </div>
             <div class="col-lg-6 col-12 d-flex justify-content-start py-3">
