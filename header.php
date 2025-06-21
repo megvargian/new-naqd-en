@@ -90,7 +90,7 @@ $all_tags = get_tags( array(
 							<input type="checkbox" id="changeTheme">
 							<span class="slider">
 								<!-- <span class="label-text EN helvetica-regular">En</span> -->
-								<span class="label-text EN d-none helvetica-regular">EN</span>
+								<span class="label-text EN helvetica-regular">EN</span>
 							</span>
 						</label>
 					</div>
