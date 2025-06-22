@@ -739,49 +739,49 @@ add_action('wp_ajax_load_more_products', 'load_more_products');
 add_action('wp_ajax_nopriv_load_more_products', 'load_more_products');
 
 // increment count when post/ video is viewed
-function track_post_views($post_id) {
+// function track_post_views($post_id) {
 
-    $post_type = get_post_type($post_id);
-    if (!in_array($post_type, ['post', 'video'])) return;
+//     $post_type = get_post_type($post_id);
+//     if (!in_array($post_type, ['post', 'video'])) return;
 
-    global $wpdb;
-    $table_name = 'dnaq_view_counter';
+//     global $wpdb;
+//     $table_name = 'dnaq_view_counter';
 
-    $wpdb->query($wpdb->prepare("
-        INSERT INTO $table_name (post_id, count)
-        VALUES (%d, 1)
-        ON DUPLICATE KEY UPDATE count = count + 1
-    ", $post_id));
-}
-add_action('wp', function () {
-    if (is_singular('post')) {
-        global $post;
-        track_post_views($post->ID);
-    }
-});
+//     $wpdb->query($wpdb->prepare("
+//         INSERT INTO $table_name (post_id, count)
+//         VALUES (%d, 1)
+//         ON DUPLICATE KEY UPDATE count = count + 1
+//     ", $post_id));
+// }
+// add_action('wp', function () {
+//     if (is_singular('post')) {
+//         global $post;
+//         track_post_views($post->ID);
+//     }
+// });
 
-//reset every month
-function schedule_monthly_reset() {
-    if (!wp_next_scheduled('monthly_views_reset')) {
-        wp_schedule_event(strtotime('first day of next month midnight'), 'monthly', 'monthly_views_reset');
-    }
-}
-register_activation_hook(__FILE__, 'schedule_monthly_reset');
+// //reset every month
+// function schedule_monthly_reset() {
+//     if (!wp_next_scheduled('monthly_views_reset')) {
+//         wp_schedule_event(strtotime('first day of next month midnight'), 'monthly', 'monthly_views_reset');
+//     }
+// }
+// register_activation_hook(__FILE__, 'schedule_monthly_reset');
 
-// Add custom interval if not already available
-add_filter('cron_schedules', function ($schedules) {
-    $schedules['monthly'] = [
-        'interval' => 30 * DAY_IN_SECONDS,
-        'display'  => __('Once Monthly')
-    ];
-    return $schedules;
-});
-function reset_monthly_views() {
-    global $wpdb;
-    $table_name = 'dnaq_view_counter';
-    $wpdb->query("UPDATE $table_name SET count = 0");
-}
-add_action('monthly_views_reset', 'reset_monthly_views');
+// // Add custom interval if not already available
+// add_filter('cron_schedules', function ($schedules) {
+//     $schedules['monthly'] = [
+//         'interval' => 30 * DAY_IN_SECONDS,
+//         'display'  => __('Once Monthly')
+//     ];
+//     return $schedules;
+// });
+// function reset_monthly_views() {
+//     global $wpdb;
+//     $table_name = 'dnaq_view_counter';
+//     $wpdb->query("UPDATE $table_name SET count = 0");
+// }
+// add_action('monthly_views_reset', 'reset_monthly_views');
 
 // get top 3 views
 function get_top_3_most_visited($type = 'post') {
