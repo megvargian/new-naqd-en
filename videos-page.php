@@ -390,22 +390,22 @@ $next4  = array_slice($video_parts_ids, 10, 4);
                 },
             });
 	    }
-        function addCounterViewForVideo(videoId) {
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                data: {
-                    action: 'add_counter_view_video',
-                    id: videoId,
-                },
-                success: function(response) {
-                    console.log('view', videoId)
-                },
-                error: function(error) {
-                    console.error(error)
-                },
-            });
-        }
+        // function addCounterViewForVideo(videoId) {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        //         data: {
+        //             action: 'add_counter_view_video',
+        //             id: videoId,
+        //         },
+        //         success: function(response) {
+        //             console.log('view', videoId)
+        //         },
+        //         error: function(error) {
+        //             console.error(error)
+        //         },
+        //     });
+        // }
     });
 </script>
 <?php

@@ -377,22 +377,22 @@ $count=0;
             $('.videoOverlay-' + key).find('iframe').attr('src', '');
 		    $('html, body').removeClass('hide_scroll');
         });
-        function addCounterViewForVideo(videoId) {
-            $.ajax({
-                type: 'POST',
-                url: '<?php echo admin_url('admin-ajax.php'); ?>',
-                data: {
-                    action: 'add_counter_view_video',
-                    id: videoId,
-                },
-                success: function(response) {
-                    console.log('view', videoId)
-                },
-                error: function(error) {
-                    console.error(error)
-                },
-            });
-        }
+        // function addCounterViewForVideo(videoId) {
+        //     $.ajax({
+        //         type: 'POST',
+        //         url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        //         data: {
+        //             action: 'add_counter_view_video',
+        //             id: videoId,
+        //         },
+        //         success: function(response) {
+        //             console.log('view', videoId)
+        //         },
+        //         error: function(error) {
+        //             console.error(error)
+        //         },
+        //     });
+        // }
         <?php if(!isMob()){ ?>
             // for rassif
             $('.rassif-section').on('mouseenter', function() {

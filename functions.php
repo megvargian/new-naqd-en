@@ -818,10 +818,10 @@ add_action('wp_ajax_nopriv_load_more_products', 'load_more_products');
 // }
 
 // handle ajax for video view counter
-function add_counter_view_video() {
-    $video_id = $_POST['id'];
-    track_post_views($video_id);
-    wp_die();
-}
-add_action('wp_ajax_add_counter_view_video', 'add_counter_view_video');
-add_action('wp_ajax_nopriv_add_counter_view_video', 'add_counter_view_video');
+// function add_counter_view_video() {
+//     $video_id = $_POST['id'];
+//     track_post_views($video_id);
+//     wp_die();
+// }
+// add_action('wp_ajax_add_counter_view_video', 'add_counter_view_video');
+// add_action('wp_ajax_nopriv_add_counter_view_video', 'add_counter_view_video');
