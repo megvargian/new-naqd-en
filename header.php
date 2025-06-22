@@ -306,6 +306,7 @@ $all_tags = get_tags( array(
 		</nav>
 	</header>
 </div>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.5/dist/js.cookie.min.js"></script>
 <script>
 jQuery(document).ready(function($) {
 	// toggle theme
@@ -459,6 +460,21 @@ jQuery(document).ready(function($) {
 			$('#progressBar').css('background-color', '#B6E60D');
 		}
 	}
+	// add cookie on every heart click article
+	if(Cookies.get('article-<?php echo $article_id; ?>') === '1'){
+		$('.heart').addClass('d-none');
+		$('.heart-filled').removeClass('d-none');
+	}
+	$('.heart').click(function(){
+		$(this).addClass('d-none');
+		$('.heart-filled').removeClass('d-none');
+		Cookies.set('article-<?php echo $article_id; ?>', '1', { expires: 7 });
+	});
+	$('.heart-filled').click(function(){
+		$(this).addClass('d-none');
+		$('.heart').removeClass('d-none');
+		Cookies.remove('article-<?php echo $article_id; ?>');
+	});
 });
 </script>
 <div class="site-content">
