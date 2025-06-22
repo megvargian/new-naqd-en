@@ -800,22 +800,22 @@ function get_top_3_most_visited($type = 'post') {
 
     return $results;
 }
-function get_top_5_most_visited($type = 'post') {
-    global $wpdb;
+// function get_top_5_most_visited($type = 'post') {
+//     global $wpdb;
 
-    $table_name = 'dnaq_view_counter';
+//     $table_name = 'dnaq_view_counter';
 
-    $results = $wpdb->get_results($wpdb->prepare("
-        SELECT p.ID, p.post_title, vc.count
-        FROM $wpdb->posts p
-        INNER JOIN $table_name vc ON p.ID = vc.post_id
-        WHERE p.post_type = %s AND p.post_status = 'publish'
-        ORDER BY vc.count DESC
-        LIMIT 5
-    ", $type));
+//     $results = $wpdb->get_results($wpdb->prepare("
+//         SELECT p.ID, p.post_title, vc.count
+//         FROM $wpdb->posts p
+//         INNER JOIN $table_name vc ON p.ID = vc.post_id
+//         WHERE p.post_type = %s AND p.post_status = 'publish'
+//         ORDER BY vc.count DESC
+//         LIMIT 5
+//     ", $type));
 
-    return $results;
-}
+//     return $results;
+// }
 
 // handle ajax for video view counter
 function add_counter_view_video() {

@@ -32,7 +32,7 @@ if ( $video_parts->have_posts() ) {
 $video_parts_chunks_ids = array_chunk($video_parts_ids, 2);
 $get_homepage_fields = get_fields();
 $count=0;
-$top_posts = get_top_3_most_visited('post');
+// $top_posts = get_top_3_most_visited('post');
 ?>
 <section class="homepage">
     <div id="filter-container" class="container py-5">

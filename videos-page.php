@@ -23,7 +23,7 @@ if ( $video_parts->have_posts() ) {
 $first8 = array_slice($video_parts_ids, 0, 8);
 $next2  = array_slice($video_parts_ids, 8, 2);
 $next4  = array_slice($video_parts_ids, 10, 4);
-$top_videos = get_top_3_most_visited('video');
+// $top_videos = get_top_3_most_visited('video');
 ?>
 <section class="categories">
     <div class="container">
