@@ -10,11 +10,11 @@
  */
 $get_general_fields = get_fields('options');
 echo '<pre>'; print_r($get_general_fields); echo'</pre>';
-// $tags = $get_general_fields['tags'];
-// $social_media_links = $get_general_fields['social_links'];
-// $main_menu = $get_general_fields['main_menu'];
-// $main_menu_part_one = array_slice($main_menu, 0, 4);
-// $main_menu_part_two = array_slice($main_menu, 4, 3);
+$tags = $get_general_fields['tags'];
+$social_media_links = $get_general_fields['social_links'];
+$main_menu = $get_general_fields['main_menu'];
+$main_menu_part_one = array_slice($main_menu, 0, 4);
+$main_menu_part_two = array_slice($main_menu, 4, 3);
 // get all cats and tags
 // $all_categories = get_categories( array(
 //     'hide_empty' => false, // Set to true to exclude empty categories
