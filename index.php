@@ -3,38 +3,38 @@
  * Template Name: Homepage
  */
 get_header();
-$second_part = new WP_Query(
-    array(
-        'post_type'      => 'post',
-        'posts_per_page' =>  8,
-        'offset'         =>  1,
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-    )
-);
-$video_parts_ids = array();
-$video_parts = new WP_Query(
-    array(
-        'post_type'      => 'video',
-        'posts_per_page' =>  6,
-        'orderby'        => 'date',
-        'order'          => 'DESC',
-        'fields'         => 'ids',
-    )
-);
-if ( $video_parts->have_posts() ) {
-    while ( $video_parts->have_posts() ) {
-        $video_parts->the_post();
-        array_push($video_parts_ids, get_the_ID());
-    }
-    wp_reset_postdata();
-}
-$video_parts_chunks_ids = array_chunk($video_parts_ids, 2);
-$get_homepage_fields = get_fields();
-$count=0;
-$top_posts = get_top_3_most_visited('post');
+// $second_part = new WP_Query(
+//     array(
+//         'post_type'      => 'post',
+//         'posts_per_page' =>  8,
+//         'offset'         =>  1,
+//         'orderby'        => 'date',
+//         'order'          => 'DESC',
+//     )
+// );
+// $video_parts_ids = array();
+// $video_parts = new WP_Query(
+//     array(
+//         'post_type'      => 'video',
+//         'posts_per_page' =>  6,
+//         'orderby'        => 'date',
+//         'order'          => 'DESC',
+//         'fields'         => 'ids',
+//     )
+// );
+// if ( $video_parts->have_posts() ) {
+//     while ( $video_parts->have_posts() ) {
+//         $video_parts->the_post();
+//         array_push($video_parts_ids, get_the_ID());
+//     }
+//     wp_reset_postdata();
+// }
+// $video_parts_chunks_ids = array_chunk($video_parts_ids, 2);
+// $get_homepage_fields = get_fields();
+// $count=0;
+// $top_posts = get_top_3_most_visited('post');
 ?>
-<section class="homepage">
+<!-- <section class="homepage">
     <div id="filter-container" class="container py-5">
         <?php
             if ( $get_homepage_fields['featured_article'] ) {
@@ -316,8 +316,8 @@ $top_posts = get_top_3_most_visited('post');
             </div>
         </div>
     </div>
-</section>
-<script>
+</section> -->
+<!-- <script>
     jQuery(document).ready(function($) {
         var swiper = new Swiper(".latestNewsSwiper", {
             slidesPerView: 4,
@@ -444,6 +444,6 @@ $top_posts = get_top_3_most_visited('post');
             });
         <?php } ?>
     })
-</script>
+</script> -->
 <?php
 get_footer();
