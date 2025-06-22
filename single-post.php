@@ -11,7 +11,7 @@ $article_id = get_the_ID();
 $title = get_the_title($article_id);
 $get_article_fields = get_fields();
 $author_id = $get_article_fields['author'];
-// $most_view_articles_top_five = get_top_5_most_visited('post');
+$most_view_articles_top_five = get_top_5_most_visited('post');
 // Get current post tags and categories
 $tags = wp_get_post_tags( $article_id, array( 'fields' => 'ids' ) );
 $get_assigned_tags = get_the_tags();
