@@ -565,8 +565,9 @@ p{
 	.bg-color-green{
 		border-radius: 15px;
 		.main-img{
-			border-top-left-radius: 15px;
-			border-bottom-left-radius: 15px;
+			border-radius: 15px;
+			border-top-right-radius: 0;
+			border-bottom-right-radius: 0;
 		}
 		p{
 			font-family: $Bressay_Regular;

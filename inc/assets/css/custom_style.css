@@ -639,8 +639,9 @@ p {
   border-radius: 15px;
 }
 .homepage .bg-color-green .main-img {
-  border-top-left-radius: 15px;
-  border-bottom-left-radius: 15px;
+  border-radius: 15px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
 }
 .homepage .bg-color-green p {
   font-family: "Bressay-Regular";
