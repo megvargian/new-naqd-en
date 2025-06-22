@@ -51,12 +51,6 @@ $top_posts = get_top_3_most_visited('post');
                 $limited = implode( ' ', array_slice( $words, 0, 200 ) );
         ?>
             <div class="row bg-color-green mb-2"  <?php if(!isMob()) {?>style="background-color: <?php echo $get_homepage_fields['background_color']; ?>" <?php } ?>>
-                <div class="col-lg-4 col-12 mb-2 mb-sm-0 px-1 px-sm-0 position-relative">
-                    <a href="<?php echo get_permalink($article_id); ?>">
-                        <img class="w-100 h-100 d-block main-img" src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
-                        <img class="feature" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/feature-dark.png" alt="feature">
-                    </a>
-                </div>
                 <div class="col-8 d-lg-flex d-none px-0">
                     <div class="d-flex justify-content-between align-items-center flex-column">
                         <div class="p-5 pb-0 text-left">
@@ -83,6 +77,12 @@ $top_posts = get_top_3_most_visited('post');
                         </div>
                     </div>
 
+                </div>
+                <div class="col-lg-4 col-12 mb-2 mb-sm-0 px-1 px-sm-0 position-relative">
+                    <a href="<?php echo get_permalink($article_id); ?>">
+                        <img class="w-100 h-100 d-block main-img" src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
+                        <img class="feature" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/feature-dark.png" alt="feature">
+                    </a>
                 </div>
             </div>
         <?php } ?>

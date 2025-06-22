@@ -105,10 +105,10 @@ $main_menu = $get_general_fields['main_menu'];
             </div>
             <div class="col-lg-6 col-12">
                 <div class="d-flex justify-content-end text-right">
+                    <p>Follow Naqd channel on YouTube</p>
                     <a class="button-green" href="#">
-                        الاشتراك
+                        Subscribe
                     </a>
-                    <p>تابعوا قناة نقد على يوتيوب</p>
                 </div>
             </div>
         </div>

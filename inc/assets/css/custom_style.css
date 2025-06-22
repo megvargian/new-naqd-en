@@ -718,7 +718,7 @@ p {
 .homepage .most-read-articles ul {
   list-style: none;
   counter-reset: item;
-  padding-right: 3rem;
+  padding-left: 3rem;
 }
 .homepage .most-read-articles ul li {
   padding-bottom: 1rem;
@@ -747,7 +747,7 @@ p {
   content: counter(item);
   counter-increment: item;
   position: absolute;
-  right: -2.5rem;
+  left: -2.5rem;
   top: 40%;
   transform: translateY(-50%);
   background-color: #5D0DE6;
@@ -778,7 +778,7 @@ p {
 }
 .homepage .subscribe h4 {
   color: #fff;
-  font-size: 2.5rem;
+  font-size: 2.1rem;
   font-family: "ManchetteFine-Bold";
 }
 .homepage .subscribe input {
