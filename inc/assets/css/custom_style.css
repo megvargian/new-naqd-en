@@ -345,7 +345,7 @@ p {
 
 .rassif-section img {
   width: 100%;
-  height: calc(100% - 178px);
+  height: calc(100% - 238px);
   object-fit: cover;
   transition: all 0.3s ease;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
