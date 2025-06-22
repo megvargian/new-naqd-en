@@ -9,7 +9,6 @@
  * @package WP_Bootstrap_Starter
  */
 $get_general_fields = get_fields('options');
-echo '<pre>'; print_r($get_general_fields); echo'</pre>';
 $tags = $get_general_fields['tags'];
 $social_media_links = $get_general_fields['social_links'];
 $main_menu = $get_general_fields['main_menu'];
