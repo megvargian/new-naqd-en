@@ -270,7 +270,7 @@ p{
 		border-radius: 15px;
 		z-index: -1;
 		left: 0;
-		bottom: 30%;
+		bottom: 20%;
 		max-width: 400px;
 		height: auto;
 		background-color: transparent;
@@ -565,9 +565,8 @@ p{
 	.bg-color-green{
 		border-radius: 15px;
 		.main-img{
-			border-radius: 15px;
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
+			border-top-right-radius: 15px;
+			border-bottom-right-radius: 15px;
 		}
 		p{
 			font-family: $Bressay_Regular;

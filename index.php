@@ -233,6 +233,23 @@ $top_posts = get_top_3_most_visited('post');
             <?php } ?>
         </div>
         <div class="row parent-row-rassif">
+            <div class="col-lg-6 col-12 mb-2 px-1">
+                <div class="rassif-section fade-in">
+                    <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
+                    <div class="title title-padding">
+                        <h2>Sons of the Sidewalk: The Full Report</h2>
+                    </div>
+                    <?php  if(!isMob()){?>
+                        <div class="rassif-description">
+                            <div class="px-4">
+                                <h2 class="mb-3">Sons of the Sidewalk: The Full Report</h2>
+                                <p class="mb-3">Organized networks, implicated politicians, and children paying the price. You won't believe what you'll hear and see in the in-depth investigative film #Sons_of_the_Sidewalk, produced by the Naqd platform in cooperation with the Samir Kassir Foundation. Watch it now.</p>
+                                <a href="#">More</a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
             <?php foreach($video_parts_chunks_ids[2] as $video_id){
                     $url = get_field('youtube_url', $video_id);
                     $path = parse_url($url, PHP_URL_PATH); // "/embed/UqI3exV3YPM"
@@ -263,23 +280,6 @@ $top_posts = get_top_3_most_visited('post');
                     </div>
                 </div>
             <?php } ?>
-            <div class="col-lg-6 col-12 mb-2 px-1">
-                <div class="rassif-section fade-in">
-                    <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
-                    <div class="title title-padding">
-                        <h2>Sons of the Sidewalk: The Full Report</h2>
-                    </div>
-                    <?php  if(!isMob()){?>
-                        <div class="rassif-description">
-                            <div class="px-4">
-                                <h2 class="mb-3">Sons of the Sidewalk: The Full Report</h2>
-                                <p class="mb-3">Organized networks, implicated politicians, and children paying the price. You won't believe what you'll hear and see in the in-depth investigative film #Sons_of_the_Sidewalk, produced by the Naqd platform in cooperation with the Samir Kassir Foundation. Watch it now.</p>
-                                <a href="#">More</a>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
         </div>
         <div class="row">
             <?php for($i=9; $i<17; $i++){ ?>
@@ -409,7 +409,7 @@ $top_posts = get_top_3_most_visited('post');
                 setTimeout(() => {
                     $(this).find('.title').css('display', 'none');
                     $(this).find('.rassif-description').css({
-                        'bottom': '35%',
+                        'bottom': '25%',
                         'opacity': '1',
                         'z-index': '1',
                         'visibility': 'visible'
@@ -420,7 +420,7 @@ $top_posts = get_top_3_most_visited('post');
                 // Reset styles (optional – adjust as needed)
                 $(this).find('img').removeClass('h-100');
                 $(this).find('.rassif-description').css({
-                    'bottom': '30%',
+                    'bottom': '20%',
                     'opacity': '0',
                     'z-index': '-1',
                     'visibility': 'hidden'
