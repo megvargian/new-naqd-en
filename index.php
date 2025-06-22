@@ -105,36 +105,6 @@ $top_posts = get_top_3_most_visited('post');
             }?>
         </div>
         <div class="row">
-            <div class="col-lg-6 col-12 mb-2 px-1">
-                <div class="most-read-articles fade-in">
-                    <h2 class="mb-3 mt-3 mb-lg-5 mt-lg-4">
-                        الأكثر قراءة
-                    </h2>
-                    <ul>
-                        <?php foreach($top_posts as $post){
-                                $post_id = $post->ID;
-                                $get_fields = get_fields($post->ID);
-                                $author_id = $get_fields['author'];
-                        ?>
-                            <li>
-                                <a href="<?php echo get_permalink($post_id);?>">
-                                    <h3>
-                                        <?php echo $post->post_title; ?>
-                                    </h3>
-                                </a>
-                                <div class="author">
-                                    <a href="<?php echo get_permalink($author_id); ?>">
-                                        <?php echo get_the_title($author_id);?>
-                                    </a>
-                                    <div class="date helvetica-regular">
-                                        <?php echo get_the_date('j M Y', $post_id);?>
-                                    </div>
-                                </div>
-                            </li>
-                        <?php } ?>
-                    </ul>
-                </div>
-            </div>
             <?php foreach($video_parts_chunks_ids[0] as $video_id){
                     $url = get_field('youtube_url', $video_id);
                     $path = parse_url($url, PHP_URL_PATH); // "/embed/UqI3exV3YPM"
@@ -165,8 +135,63 @@ $top_posts = get_top_3_most_visited('post');
                     </div>
                 </div>
             <?php } ?>
+            <div class="col-lg-6 col-12 mb-2 px-1">
+                <div class="most-read-articles fade-in">
+                    <h2 class="mb-3 mt-3 mb-lg-5 mt-lg-4">
+                        Most read
+                    </h2>
+                    <ul>
+                        <?php foreach($top_posts as $post){
+                                $post_id = $post->ID;
+                                $get_fields = get_fields($post->ID);
+                                $author_id = $get_fields['author'];
+                        ?>
+                            <li>
+                                <a href="<?php echo get_permalink($post_id);?>">
+                                    <h3>
+                                        <?php echo $post->post_title; ?>
+                                    </h3>
+                                </a>
+                                <div class="author">
+                                    <a href="<?php echo get_permalink($author_id); ?>">
+                                        <?php echo get_the_title($author_id);?>
+                                    </a>
+                                    <div class="date helvetica-regular">
+                                        <?php echo get_the_date('j M Y', $post_id);?>
+                                    </div>
+                                </div>
+                            </li>
+                        <?php } ?>
+                    </ul>
+                </div>
+            </div>
         </div>
         <div class="row">
+             <div class="col-lg-6 col-12">
+                <div class="row">
+                    <div class="col-lg-6 col-12 mb-2 px-1">
+                        <a href="#" class="fade-in">
+                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
+                        </a>
+                    </div>
+                    <div class="col-lg-6 col-12 mb-2 px-1">
+                        <a href="#" class="fade-in">
+                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
+                        </a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 mb-2 px-1">
+                        <div class="subscribe" class="fade-in">
+                            <h4>To receive the Criticism newsletter in your email</h4>
+                            <form  action="/">
+                                <input class="email" type="email" placeholder="Your email" required>
+                                <button class="submit">Subscribe</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <?php foreach($video_parts_chunks_ids[1] as $video_id){
                     $url = get_field('youtube_url', $video_id);
                     $path = parse_url($url, PHP_URL_PATH); // "/embed/UqI3exV3YPM"
@@ -197,31 +222,6 @@ $top_posts = get_top_3_most_visited('post');
                     </div>
                 </div>
             <?php } ?>
-            <div class="col-lg-6 col-12">
-                <div class="row">
-                    <div class="col-lg-6 col-12 mb-2 px-1">
-                        <a href="#" class="fade-in">
-                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-12 mb-2 px-1">
-                        <a href="#" class="fade-in">
-                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-12 mb-2 px-1">
-                        <div class="subscribe" class="fade-in">
-                            <h4>لتصلكم نشرة نقد إلـى بريدكـم الالكترونـي</h4>
-                            <form  action="/">
-                                <input class="email" type="email" placeholder="بريدكم الالكتروني" required>
-                                <button class="submit">الاشتراك</button>
-                            </form>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </div>
         <div class="row">
             <?php for($i=0; $i<4; $i++){ ?>
@@ -233,27 +233,6 @@ $top_posts = get_top_3_most_visited('post');
             <?php } ?>
         </div>
         <div class="row parent-row-rassif">
-            <div class="col-lg-6 col-12 mb-2 px-1">
-                <div class="rassif-section fade-in">
-                    <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
-                    <div class="title title-padding">
-                        <h2>أبناء الرصيف: التقرير الكامل</h2>
-                    </div>
-                    <?php  if(!isMob()){?>
-                        <div class="rassif-description">
-                            <div class="px-4">
-                                <h2 class="mb-3">أبناء الرصيف: التقرير الكامل</h2>
-                                <p class="mb-3">شبكات منظمة، سياسيون متورطون، وأطفال يدفعون الثمن.
-                                    لن تصدقوا ما ستسمعونه وتشاهدونه في الفيلم الاستقصائي
-                                    المعمق #أبناء_الرصيف من إنتاج منصة نقد بالتعاون مع
-                                    مؤسسة سمير قصير. شاهدوه الآن
-                                </p>
-                                <a href="#">المزيد</a>
-                            </div>
-                        </div>
-                    <?php } ?>
-                </div>
-            </div>
             <?php foreach($video_parts_chunks_ids[2] as $video_id){
                     $url = get_field('youtube_url', $video_id);
                     $path = parse_url($url, PHP_URL_PATH); // "/embed/UqI3exV3YPM"
@@ -284,6 +263,23 @@ $top_posts = get_top_3_most_visited('post');
                     </div>
                 </div>
             <?php } ?>
+            <div class="col-lg-6 col-12 mb-2 px-1">
+                <div class="rassif-section fade-in">
+                    <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
+                    <div class="title title-padding">
+                        <h2>Sons of the Sidewalk: The Full Report</h2>
+                    </div>
+                    <?php  if(!isMob()){?>
+                        <div class="rassif-description">
+                            <div class="px-4">
+                                <h2 class="mb-3">Sons of the Sidewalk: The Full Report</h2>
+                                <p class="mb-3">Organized networks, implicated politicians, and children paying the price. You won't believe what you'll hear and see in the in-depth investigative film #Sons_of_the_Sidewalk, produced by the Naqd platform in cooperation with the Samir Kassir Foundation. Watch it now.</p>
+                                <a href="#">More</a>
+                            </div>
+                        </div>
+                    <?php } ?>
+                </div>
+            </div>
         </div>
         <div class="row">
             <?php for($i=9; $i<17; $i++){ ?>
@@ -297,7 +293,7 @@ $top_posts = get_top_3_most_visited('post');
         <div class="row pt-lg-5 pt-3">
             <div class="col-12 mb-3 text-right">
                 <h2>
-                    آخر الأخبار
+                    latest news
                 </h2>
             </div>
             <div class="col-12 position-relative">
