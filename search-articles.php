@@ -57,7 +57,7 @@ $tags = get_tags(array(
                                                 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zM5
                                                 20V9h14v11H5z"/>
                                             </svg>
-                                            <span class="label">التاريخ</span>
+                                            <span class="label">Date</span>
                                             <input type="date" id="filter_date" name="filter_date">
                                         </div>
                                     </li>
