@@ -30,7 +30,6 @@ $main_part = new WP_Query(
     array(
         'post_type'      => 'post',
         'posts_per_page' =>  22,
-        'offset'         =>  1,
         'orderby'        => 'date',
         'order'          => 'DESC',
     )
