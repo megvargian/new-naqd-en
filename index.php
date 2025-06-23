@@ -236,10 +236,13 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
             <?php } ?>
         </div>
         <div class="row">
-            <?php for($i=0; $i<4; $i++){ ?>
+            <?php foreach ($third_part as $key => $article_id) {
+                    $article_title = get_the_title($article_id);
+                    $image_url = get_the_post_thumbnail_url($article_id);
+            ?>
                 <div class="col-lg-3 col-12 mb-2 px-1">
-                    <a href="/test-1" class="fade-in">
-                        <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
+                    <a href="<?php echo get_permalink($article_id);?>" class="fade-in">
+                        <img class="w-100 d-block single-article " src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
                     </a>
                 </div>
             <?php } ?>
@@ -294,10 +297,13 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
             <?php } ?>
         </div>
         <div class="row">
-            <?php for($i=9; $i<17; $i++){ ?>
+            <?php foreach ($third_part as $key => $article_id) {
+                    $article_title = get_the_title($article_id);
+                    $image_url = get_the_post_thumbnail_url($article_id);
+            ?>
                 <div class="col-lg-3 col-12 mb-2 px-1">
-                    <a href="/test-1" class="fade-in">
-                        <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
+                    <a href="<?php echo get_permalink($article_id);?>" class="fade-in">
+                        <img class="w-100 d-block single-article " src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
                     </a>
                 </div>
             <?php } ?>
