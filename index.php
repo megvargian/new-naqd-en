@@ -3,10 +3,10 @@
  * Template Name: Homepage
  */
 get_header();
-$second_part = new WP_Query(
+$main_part = new WP_Query(
     array(
         'post_type'      => 'post',
-        'posts_per_page' =>  8,
+        'posts_per_page' =>  22,
         'offset'         =>  1,
         'orderby'        => 'date',
         'order'          => 'DESC',
@@ -33,6 +33,11 @@ $video_parts_chunks_ids = array_chunk($video_parts_ids, 2);
 $get_homepage_fields = get_fields();
 $count=0;
 $top_posts = get_top_3_most_visited('post');
+//slicing the latest posts base on the position
+$first_part = array_slice($main_part, 0, 8);
+$second_part = array_slice($main_part, 8, 2);
+$third_part = array_slice($main_part, 10, 4);
+$fourth_part = array_slice($main_part, 14, 8);
 ?>
 <section class="homepage">
     <div id="filter-container" class="container py-5">
@@ -88,9 +93,9 @@ $top_posts = get_top_3_most_visited('post');
         <?php } ?>
         <div class="row">
             <?php
-                if ( $second_part->have_posts() ) {
-                    while ( $second_part->have_posts() ) {
-                    $second_part->the_post();
+                if ( $first_part->have_posts() ) {
+                    while ( $first_part->have_posts() ) {
+                    $first_part->the_post();
                     $article_id = get_the_ID();
                     $article_title = get_the_title($article_id);
                     $image_url = get_the_post_thumbnail_url($article_id);
@@ -169,16 +174,22 @@ $top_posts = get_top_3_most_visited('post');
         <div class="row">
              <div class="col-lg-6 col-12">
                 <div class="row">
-                    <div class="col-lg-6 col-12 mb-2 px-1">
-                        <a href="#" class="fade-in">
-                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
-                        </a>
-                    </div>
-                    <div class="col-lg-6 col-12 mb-2 px-1">
-                        <a href="#" class="fade-in">
-                            <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
-                        </a>
-                    </div>
+                    <?php
+                        if ( $second_part->have_posts() ) {
+                            while ( $second_part->have_posts() ) {
+                            $second_part->the_post();
+                            $article_id = get_the_ID();
+                            $article_title = get_the_title($article_id);
+                            $image_url = get_the_post_thumbnail_url($article_id);
+                    ?>
+                        <div class="col-lg-6 col-12 mb-2 px-1">
+                            <a href="<?php echo get_permalink($article_id);?>" class="fade-in">
+                                <img class="w-100 d-block single-article " src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
+                            </a>
+                        </div>
+                    <?php }
+                        wp_reset_postdata();
+                    }?>
                 </div>
                 <div class="row">
                     <div class="col-12 mb-2 px-1">
