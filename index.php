@@ -48,7 +48,7 @@ $top_posts = get_top_3_most_visited('post');
                 $allowed_tags = '<p><a><strong><em><ul><ol><li><br>'; // Adjust as needed
                 $clean_content = wp_strip_all_tags( strip_tags( $content, $allowed_tags ), true );
                 $words = explode( ' ', $clean_content );
-                $limited = implode( ' ', array_slice( $words, 0, 200 ) );
+                $limited = implode( ' ', array_slice( $words, 0, 150 ) );
         ?>
             <div class="row bg-color-green mb-2"  <?php if(!isMob()) {?>style="background-color: <?php echo $get_homepage_fields['background_color']; ?>" <?php } ?>>
                 <div class="col-8 d-lg-flex d-none px-0">
