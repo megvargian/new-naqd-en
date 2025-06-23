@@ -216,14 +216,14 @@ p {
 .most-read-articles ul {
   list-style: none;
   counter-reset: item;
-  padding-right: 3rem;
+  padding-left: 3rem;
 }
 .most-read-articles ul li {
   padding-bottom: 1rem;
   border-bottom: 1px solid #5D0DE6;
   position: relative;
   padding: 1rem 0rem 1rem 1rem;
-  margin-right: 3rem;
+  margin-left: 3rem;
   width: fit-content;
 }
 .most-read-articles ul li h3 {
@@ -245,7 +245,7 @@ p {
   content: counter(item);
   counter-increment: item;
   position: absolute;
-  right: -2.5rem;
+  left: -2.5rem;
   top: 40%;
   transform: translateY(-50%);
   background-color: #5D0DE6;
@@ -1225,7 +1225,7 @@ footer .border-green {
   color: #fff;
   font-family: "ManchetteFine-Bold";
   font-size: 2rem;
-  margin-left: 2rem;
+  margin-right: 2rem;
   background-color: transparent;
   border: none;
   outline: none;

@@ -365,7 +365,7 @@ $top_videos = get_top_3_most_visited('video');
             if(activeTags.length !== 0){
                 filterVideosBasedTags(activeTags);
             } else {
-                window.location.href = '<?php echo get_permalink(86); ?>';
+                window.location.href = '<?php echo get_permalink(366); ?>';
             }
         });
         function filterVideosBasedTags(activeTags) {
