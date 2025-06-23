@@ -1010,6 +1010,10 @@ footer .border-green {
   padding-left: 2.5rem;
 }
 
+.more.custom-padding img {
+  aspect-ratio: 3/3.75;
+}
+
 .about-and-contact-us.title {
   background-color: #313136;
 }
