@@ -26,12 +26,13 @@ $count=0;
 $top_posts = get_top_3_most_visited('post');
 //slicing the latest posts base on the position
 $main_part_ids = array();
-$exclude_post_id = $get_homepage_fields['featured_article'] ? $get_homepage_fields['featured_article'] : '';
+$exclude_post_id_featured_article = $get_homepage_fields['featured_article'] ? $get_homepage_fields['featured_article'] : '';
+$exclude_post_id_second_featured_article = $get_homepage_fields['second_feature_article'] ? $get_homepage_fields['second_feature_article'] : '';
 $main_part = new WP_Query(
     array(
         'post_type'      => 'post',
         'posts_per_page' => 22,
-        'post__not_in'   => [$exclude_post_id],
+        'post__not_in'   => [$exclude_post_id_featured_article, $exclude_post_id_second_featured_article],
         'orderby'        => 'date',
         'order'          => 'DESC',
 
