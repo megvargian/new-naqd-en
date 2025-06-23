@@ -195,7 +195,7 @@ $post_image = wp_get_attachment_url(get_post_thumbnail_id($article_id));
                                     $related_post_id = get_the_ID();
                                 ?>
                                     <div class="col-lg-4 col-6 px-1 mb-4">
-                                        <a href="<?php get_permalink($related_post_id); ?>">
+                                        <a href="<?php echo get_permalink($related_post_id); ?>">
                                             <img style="border-radius: 15px;" src="<?php echo get_the_post_thumbnail_url($related_post_id); ?>" alt="<?php get_the_title($related_post_id);?>" class="d-block w-100">
                                         </a>
                                     </div>
