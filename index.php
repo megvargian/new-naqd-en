@@ -409,7 +409,7 @@ $top_posts = get_top_3_most_visited('post');
                 setTimeout(() => {
                     $(this).find('.title').css('display', 'none');
                     $(this).find('.rassif-description').css({
-                        'bottom': '15%',
+                        'bottom': '5%',
                         'opacity': '1',
                         'z-index': '1',
                         'visibility': 'visible'
