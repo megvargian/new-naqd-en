@@ -302,7 +302,7 @@ p {
   border-radius: 15px;
   z-index: -1;
   left: 0;
-  bottom: 1%;
+  bottom: -5%;
   max-width: 400px;
   height: auto;
   background-color: transparent;
