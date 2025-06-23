@@ -43,6 +43,7 @@ if ( $main_part->have_posts() ) {
     wp_reset_postdata();
 }
 $first_part = array_slice($main_part_ids, 0, 8);
+echo '<pre>'; print_r($first_part); echo'</pre>';
 $second_part = array_slice($main_part_ids, 8, 2);
 $third_part = array_slice($main_part_ids, 10, 4);
 $fourth_part = array_slice($main_part_ids, 14, 8);
