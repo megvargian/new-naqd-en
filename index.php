@@ -248,17 +248,18 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
         </div>
         <div class="row parent-row-rassif">
             <div class="col-lg-6 col-12 mb-2 px-1">
+                <?php $second_feature_title = get_the_title($get_homepage_fields['second_feature_article']); ?>
                 <div class="rassif-section fade-in">
                     <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
                     <div class="title title-padding">
-                        <h2>Sons of the Sidewalk: The Full Report</h2>
+                        <h2><?php echo $second_feature_title; ?></h2>
                     </div>
                     <?php  if(!isMob()){?>
                         <div class="rassif-description">
                             <div class="px-4">
-                                <h2 class="mb-3">Sons of the Sidewalk: The Full Report</h2>
-                                <p class="mb-3">Organized networks, implicated politicians, and children paying the price. You won't believe what you'll hear and see in the in-depth investigative film #Sons_of_the_Sidewalk, produced by the Naqd platform in cooperation with the Samir Kassir Foundation. Watch it now.</p>
-                                <a href="#">More</a>
+                                <h2 class="mb-3"><?php echo $second_feature_title; ?></h2>
+                                <p class="mb-3"><?php echo $get_homepage_fields['description'];?></p>
+                                <a href="<?php echo get_permalink($get_homepage_fields['second_feature_article']); ?>">More</a>
                             </div>
                         </div>
                     <?php } ?>
