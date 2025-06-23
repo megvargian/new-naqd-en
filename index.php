@@ -3,6 +3,7 @@
  * Template Name: Homepage
  */
 get_header();
+$main_part_ids = arrya();
 $main_part = new WP_Query(
     array(
         'post_type'      => 'post',
@@ -34,7 +35,6 @@ $get_homepage_fields = get_fields();
 $count=0;
 $top_posts = get_top_3_most_visited('post');
 //slicing the latest posts base on the position
-$main_part_ids = arrya();
 if ( $main_part->have_posts() ) {
     while ( $main_part->have_posts() ) {
         $main_part->the_post();
@@ -42,6 +42,7 @@ if ( $main_part->have_posts() ) {
     }
     wp_reset_postdata();
 }
+echo '<pre>'; print_r($main_part_ids); echo'</pre>';
 $first_part = array_slice($main_part_ids, 0, 8);
 echo '<pre>'; print_r($first_part); echo'</pre>';
 $second_part = array_slice($main_part_ids, 8, 2);
