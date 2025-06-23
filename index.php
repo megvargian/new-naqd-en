@@ -420,7 +420,7 @@ $top_posts = get_top_3_most_visited('post');
                 // Reset styles (optional – adjust as needed)
                 $(this).find('img').removeClass('h-100');
                 $(this).find('.rassif-description').css({
-                    'bottom': '0%',
+                    'bottom': '1%',
                     'opacity': '0',
                     'z-index': '-1',
                     'visibility': 'hidden'
