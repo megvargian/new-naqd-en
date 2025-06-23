@@ -30,7 +30,7 @@ $exclude_post_id = $get_homepage_fields['featured_article'] ? $get_homepage_fiel
 $main_part = new WP_Query(
     array(
         'post_type'      => 'post',
-        'posts_per_page' => 1,
+        'posts_per_page' => 22,
         'post__not_in'   => [$exclude_post_id],
         'orderby'        => 'date',
         'order'          => 'DESC',
