@@ -34,10 +34,18 @@ $get_homepage_fields = get_fields();
 $count=0;
 $top_posts = get_top_3_most_visited('post');
 //slicing the latest posts base on the position
-$first_part = array_slice($main_part, 0, 8);
-$second_part = array_slice($main_part, 8, 2);
-$third_part = array_slice($main_part, 10, 4);
-$fourth_part = array_slice($main_part, 14, 8);
+$main_part_ids = arrya();
+if ( $main_part->have_posts() ) {
+    while ( $main_part->have_posts() ) {
+        $main_part->the_post();
+        array_push($main_part_ids, get_the_ID());
+    }
+    wp_reset_postdata();
+}
+$first_part = array_slice($main_part_ids, 0, 8);
+$second_part = array_slice($main_part_ids, 8, 2);
+$third_part = array_slice($main_part_ids, 10, 4);
+$fourth_part = array_slice($main_part_ids, 14, 8);
 ?>
 <section class="homepage">
     <div id="filter-container" class="container py-5">
@@ -93,10 +101,7 @@ $fourth_part = array_slice($main_part, 14, 8);
         <?php } ?>
         <div class="row">
             <?php
-                if ( $first_part->have_posts() ) {
-                    while ( $first_part->have_posts() ) {
-                    $first_part->the_post();
-                    $article_id = get_the_ID();
+                foreach ($first_part as $key => $article_id) {
                     $article_title = get_the_title($article_id);
                     $image_url = get_the_post_thumbnail_url($article_id);
             ?>
@@ -105,9 +110,7 @@ $fourth_part = array_slice($main_part, 14, 8);
                         <img class="w-100 d-block single-article " src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
                     </a>
                 </div>
-            <?php }
-                wp_reset_postdata();
-            }?>
+            <?php }?>
         </div>
         <div class="row">
             <?php foreach($video_parts_chunks_ids[0] as $video_id){
@@ -175,10 +178,7 @@ $fourth_part = array_slice($main_part, 14, 8);
              <div class="col-lg-6 col-12">
                 <div class="row">
                     <?php
-                        if ( $second_part->have_posts() ) {
-                            while ( $second_part->have_posts() ) {
-                            $second_part->the_post();
-                            $article_id = get_the_ID();
+                        foreach ($second_part as $key => $article_id) {
                             $article_title = get_the_title($article_id);
                             $image_url = get_the_post_thumbnail_url($article_id);
                     ?>
@@ -187,9 +187,7 @@ $fourth_part = array_slice($main_part, 14, 8);
                                 <img class="w-100 d-block single-article " src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
                             </a>
                         </div>
-                    <?php }
-                        wp_reset_postdata();
-                    }?>
+                    <?php } ?>
                 </div>
                 <div class="row">
                     <div class="col-12 mb-2 px-1">
