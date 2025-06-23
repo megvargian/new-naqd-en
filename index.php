@@ -59,19 +59,19 @@ $top_posts = get_top_3_most_visited('post');
                             </p>
                         </div>
                         <div class="d-flex justify-content-between align-items-center lower-part pb-5 px-5 w-100">
+                            <div class="helvetica-regular" >
+                                <p dir="ltr" style="color: <?php echo $get_homepage_fields['text_color']; ?>">
+                                    <img class="heart" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/heart.svg" alt="heart">
+                                    <img class="heart-filled d-none" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/heart-filled.svg" alt="heart">
+                                    Like this post
+                                </p>
+                            </div>
                             <div class="d-flex justify-content-center align-items-center">
                                 <a href="<?php echo get_permalink($author_id); ?>" style="color: <?php echo $get_homepage_fields['text_color']; ?>">
                                     <?php echo get_the_title($author_id);?>
                                 </a>
                                 <p class="helvetica-regular" dir="ltr" style="color: <?php echo $get_homepage_fields['text_color']; ?>">
                                     <?php echo get_the_date('j M Y', $article_id); ?>
-                                </p>
-                            </div>
-                            <div class="helvetica-regular" >
-                                <p dir="ltr" style="color: <?php echo $get_homepage_fields['text_color']; ?>">
-                                    <img class="heart" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/heart.svg" alt="heart">
-                                    <img class="heart-filled d-none" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/heart-filled.svg" alt="heart">
-                                    Like this post
                                 </p>
                             </div>
                         </div>
