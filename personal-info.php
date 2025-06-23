@@ -22,10 +22,10 @@ get_header();
 <script>
     jQuery(document).ready(function($) {
         $('input[name="url-625"]').attr('hidden', true);
-        $('input[value="لا"]').click(function(event) {
+        $('input[value="No"]').click(function(event) {
             $('input[name="url-625"]').attr('hidden', true);
         });
-        $('input[value="نعم"]').click(function(event) {
+        $('input[value="Yes"]').click(function(event) {
             $('input[name="url-625"]').attr('hidden', false);
         });
         $('input').on('click', function(e) {
