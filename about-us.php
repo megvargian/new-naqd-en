@@ -28,7 +28,7 @@ get_header();
             <div class="col-lg-10 col-12">
                 <div class="row justify-content-start">
                     <div class="col-lg-8 col-12">
-                        <h2 class="mb-4">اتصلوا بنا</h2>
+                        <h2 class="mb-4">Contact us</h2>
                         <div id="contact-us" class="contact-us">
                             <div class="form_validation_parent position-relative">
                                 <?php echo do_shortcode('[contact-form-7 id="2146739" title="Contact us"]') ?>
