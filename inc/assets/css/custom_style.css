@@ -981,7 +981,7 @@ footer .border-green {
   content: counter(item);
   counter-increment: item;
   position: absolute;
-  right: -2.5rem;
+  left: -2.5rem;
   top: 40%;
   transform: translateY(-50%);
   background-color: #FF6F00;
@@ -1002,7 +1002,7 @@ footer .border-green {
 
 .border-right-white {
   border-right: 1px solid #fff;
-  padding-right: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .custom-padding {

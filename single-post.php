@@ -185,11 +185,11 @@ $post_image = wp_get_attachment_url(get_post_thumbnail_id($article_id));
                     </div>
                 </div>
                 <div class="col-lg-8 col-12">
-                    <div class="more">
+                    <div class="more custom-padding">
                         <h2 class="mb-3">
                             More
                         </h2>
-                        <div class="row custom-padding">
+                        <div class="row">
                             <?php if ( $related_query->have_posts() ) : ?>
                                 <?php while ( $related_query->have_posts() ) : $related_query->the_post();
                                     $related_post_id = get_the_ID();
