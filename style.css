@@ -226,6 +226,30 @@ th {
 	font-style: normal;
 }
 @font-face {
+	font-family: 'NotoSerif_Condensed-Regular';
+	src:  url('inc/assets/fonts/NotoSerif_Condensed-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSerif_Condensed-Bold';
+	src:  url('inc/assets/fonts/NotoSerif_Condensed-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSerif_ExtraCondensed-Regular';
+	src:  url('inc/assets/fonts/NotoSerif_ExtraCondensed-Regular.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'NotoSerif_ExtraCondensed-Bold';
+	src:  url('inc/assets/fonts/NotoSerif_ExtraCondensed-Bold.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
 	font-family: 'NotoSerif-Regular';
 	src:  url('inc/assets/fonts/NotoSerif-Regular.ttf') format('truetype');
 	font-weight: normal;

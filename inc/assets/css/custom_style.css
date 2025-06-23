@@ -82,7 +82,7 @@ body {
   overflow-x: hidden !important;
   direction: ltr;
   width: 100%;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   background-color: #2A2A2E;
 }
 
@@ -119,14 +119,14 @@ body.hide_scroll {
 h2 {
   font-size: 2rem;
   color: #fff;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   text-align: left;
 }
 
 p {
   font-size: 1rem;
   color: #fff;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   line-height: 1.7;
 }
 
@@ -321,7 +321,7 @@ p {
 .rassif-section .rassif-description p {
   font-size: 1.2rem;
   color: #fff;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   text-align: left;
 }
 .rassif-section .rassif-description a {
@@ -361,7 +361,7 @@ p {
 .search-form input {
   background-color: #7B39ED;
   color: white;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 1rem;
   border-radius: 30px;
   width: 100%;
@@ -370,7 +370,7 @@ p {
 }
 .search-form input::placeholder {
   color: #fff;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
 }
 .search-form button {
   position: absolute;
@@ -401,7 +401,7 @@ p {
   text-align: center;
   margin: 0 0.3rem;
   font-size: 1.4rem;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
 }
@@ -642,13 +642,13 @@ p {
   border-bottom-right-radius: 15px;
 }
 .homepage .bg-color-green p {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 1.3rem;
   text-align: left;
   margin-bottom: 1.5rem;
 }
 .homepage .bg-color-green .lower-part a {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
@@ -839,7 +839,7 @@ footer .button-green {
   margin-left: 10px;
 }
 footer p {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   color: #fff;
   font-size: 1.4rem;
   text-align: left;
@@ -865,7 +865,7 @@ footer .border-green {
 }
 .single-product-page .author-section p {
   font-size: 0.9rem;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
 }
 .single-product-page .author-section a {
   color: #B6E60D;
@@ -880,7 +880,7 @@ footer .border-green {
   width: fit-content;
 }
 .single-product-page p {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 15px;
@@ -897,20 +897,20 @@ footer .border-green {
   color: #fff;
   font-size: 1rem;
   margin-right: 5px;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
 }
 .single-product-page .lower-part {
   display: flex;
 }
 .single-product-page .lower-part a {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
   text-align: left;
 }
 .single-product-page .lower-part p {
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   font-size: 0.9rem;
   color: #fff;
   margin-bottom: 0;
@@ -1039,7 +1039,7 @@ footer .border-green {
   color: #fff;
   font-size: 1.5rem;
   text-align: left;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   margin-bottom: 1.5rem;
 }
 .about-and-contact-us .members img {
@@ -1056,14 +1056,14 @@ footer .border-green {
   text-align: center;
   color: #fff;
   font-size: 1.2rem;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
 }
 .about-and-contact-us .contact-us input, .about-and-contact-us .contact-us textarea, .about-and-contact-us .contact-us select {
   background-color: #BEBEBE;
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   margin-bottom: 20px;
   color: #000;
   width: 100%;
@@ -1103,7 +1103,7 @@ footer .border-green {
   color: #fff;
   font-size: 1.5rem;
   text-align: left;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   margin-bottom: 1.5rem;
 }
 .personal-info input[type=text],
@@ -1117,7 +1117,7 @@ footer .border-green {
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   margin-bottom: 20px;
   color: #000;
   width: 100%;
@@ -1481,7 +1481,7 @@ body.dark {
   background-color: #fff;
   border-radius: 15px;
   padding: 0.5rem 1rem;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   color: #000;
   font-size: 1.2rem;
   text-align: left;
@@ -1513,7 +1513,7 @@ body.dark {
   text-align: center;
   margin: 0 0.3rem;
   font-size: 1.4rem;
-  font-family: "NotoSerif-Regular";
+  font-family: "NotoSerif_Condensed-Regular";
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
   margin-bottom: 10px;
