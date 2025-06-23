@@ -82,7 +82,7 @@ body {
   overflow-x: hidden !important;
   direction: ltr;
   width: 100%;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   background-color: #2A2A2E;
 }
 
@@ -119,14 +119,14 @@ body.hide_scroll {
 h2 {
   font-size: 2rem;
   color: #fff;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   text-align: left;
 }
 
 p {
   font-size: 1rem;
   color: #fff;
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   line-height: 1.7;
 }
 
@@ -211,7 +211,7 @@ p {
   font-size: 5rem;
   color: #000;
   text-align: center;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .most-read-articles ul {
   list-style: none;
@@ -292,7 +292,7 @@ p {
 }
 .rassif-section .title h2 {
   font-size: 3rem;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #fff;
   text-align: center;
 }
@@ -315,13 +315,13 @@ p {
 }
 .rassif-section .rassif-description h2 {
   font-size: 3rem;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   text-align: left;
 }
 .rassif-section .rassif-description p {
   font-size: 1.2rem;
   color: #fff;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   text-align: left;
 }
 .rassif-section .rassif-description a {
@@ -361,7 +361,7 @@ p {
 .search-form input {
   background-color: #7B39ED;
   color: white;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 1rem;
   border-radius: 30px;
   width: 100%;
@@ -370,7 +370,7 @@ p {
 }
 .search-form input::placeholder {
   color: #fff;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
 }
 .search-form button {
   position: absolute;
@@ -401,7 +401,7 @@ p {
   text-align: center;
   margin: 0 0.3rem;
   font-size: 1.4rem;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
 }
@@ -630,7 +630,7 @@ p {
 }
 
 .homepage h1 {
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #fff;
   font-size: 3rem;
 }
@@ -642,13 +642,13 @@ p {
   border-bottom-right-radius: 15px;
 }
 .homepage .bg-color-green p {
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 1.3rem;
   text-align: left;
   margin-bottom: 1.5rem;
 }
 .homepage .bg-color-green .lower-part a {
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
@@ -711,7 +711,7 @@ p {
   font-size: 5rem;
   color: #000;
   text-align: center;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .homepage .most-read-articles ul {
   list-style: none;
@@ -777,7 +777,7 @@ p {
 .homepage .subscribe h4 {
   color: #fff;
   font-size: 2.1rem;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .homepage .subscribe input {
   background-color: #fff;
@@ -801,7 +801,7 @@ p {
 }
 .homepage h2 {
   font-size: 3.5rem;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 
 footer .footer-tags {
@@ -816,7 +816,7 @@ footer .footer-tags li {
   flex: 0 1 auto;
 }
 footer .footer-tags li a {
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #fff;
   font-size: 2rem;
   text-align: left;
@@ -831,7 +831,7 @@ footer .button-green {
   border-radius: 15px;
   background-color: #B6E60D;
   color: #313136;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   padding: 0rem 1rem;
   font-size: 1.4rem;
   border: none;
@@ -839,7 +839,7 @@ footer .button-green {
   margin-left: 10px;
 }
 footer p {
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   color: #fff;
   font-size: 1.4rem;
   text-align: left;
@@ -865,7 +865,7 @@ footer .border-green {
 }
 .single-product-page .author-section p {
   font-size: 0.9rem;
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
 }
 .single-product-page .author-section a {
   color: #B6E60D;
@@ -880,7 +880,7 @@ footer .border-green {
   width: fit-content;
 }
 .single-product-page p {
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 1.2rem;
   color: #fff;
   margin-bottom: 15px;
@@ -890,27 +890,27 @@ footer .border-green {
   font-size: 2rem;
   color: #B6E60D;
   margin-bottom: 15px;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   display: block;
 }
 .single-product-page .tags a {
   color: #fff;
   font-size: 1rem;
   margin-right: 5px;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
 }
 .single-product-page .lower-part {
   display: flex;
 }
 .single-product-page .lower-part a {
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 1rem;
   margin-left: 10px;
   color: #fff;
   text-align: left;
 }
 .single-product-page .lower-part p {
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   font-size: 0.9rem;
   color: #fff;
   margin-bottom: 0;
@@ -924,12 +924,12 @@ footer .border-green {
 .single-product-page #theArticle h2 {
   font-size: 2rem;
   color: #B6E60D;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .single-product-page h2 {
   font-size: 3.5rem;
   color: #fff;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .single-product-page .related-articles {
   background-color: transparent !important;
@@ -945,7 +945,7 @@ footer .border-green {
   font-size: 3.5rem;
   color: #fff;
   text-align: left;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .single-product-page .related-articles .most-read-articles ul {
   list-style: none;
@@ -964,7 +964,7 @@ footer .border-green {
   color: #fff;
   font-size: 1.7rem;
   text-align: left;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .single-product-page .related-articles .most-read-articles ul li .author {
   font-size: 0.9rem;
@@ -1017,7 +1017,7 @@ footer .border-green {
   color: #fff;
 }
 .about-and-contact-us h1 {
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #B6E60D;
   text-align: center;
   font-size: 4rem;
@@ -1028,18 +1028,18 @@ footer .border-green {
 .about-and-contact-us h2 {
   font-size: 2rem;
   text-align: left;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #B6E60D;
   margin-bottom: 1.5rem;
 }
 .about-and-contact-us .bold {
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
 }
 .about-and-contact-us p {
   color: #fff;
   font-size: 1.5rem;
   text-align: left;
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   margin-bottom: 1.5rem;
 }
 .about-and-contact-us .members img {
@@ -1049,21 +1049,21 @@ footer .border-green {
 .about-and-contact-us .members h3 {
   text-align: center;
   color: #fff;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   font-size: 2rem;
 }
 .about-and-contact-us .members p {
   text-align: center;
   color: #fff;
   font-size: 1.2rem;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
 }
 .about-and-contact-us .contact-us input, .about-and-contact-us .contact-us textarea, .about-and-contact-us .contact-us select {
   background-color: #BEBEBE;
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   margin-bottom: 20px;
   color: #000;
   width: 100%;
@@ -1074,7 +1074,7 @@ footer .border-green {
 }
 .about-and-contact-us .contact-us input[type=submit] {
   background-color: #B6E60D;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #000;
   font-size: 1.3rem;
   border-radius: 20px;
@@ -1095,7 +1095,7 @@ footer .border-green {
 .personal-info h2 {
   font-size: 2rem;
   text-align: left;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #B6E60D;
   margin-bottom: 1.5rem;
 }
@@ -1103,7 +1103,7 @@ footer .border-green {
   color: #fff;
   font-size: 1.5rem;
   text-align: left;
-  font-family: "Bressay-Regular";
+  font-family: "NotoSerif-Regular";
   margin-bottom: 1.5rem;
 }
 .personal-info input[type=text],
@@ -1117,7 +1117,7 @@ footer .border-green {
   font-size: 1rem;
   padding: 0.5rem 1.5rem;
   border-radius: 20px;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   margin-bottom: 20px;
   color: #000;
   width: 100%;
@@ -1142,7 +1142,7 @@ footer .border-green {
 }
 .personal-info input[type=submit] {
   background-color: #B6E60D;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   color: #000;
   font-size: 1.3rem;
   border-radius: 20px;
@@ -1223,7 +1223,7 @@ footer .border-green {
 
 .categories .tabs li button {
   color: #fff;
-  font-family: "ManchetteFine-Bold";
+  font-family: "Assistant-Bold";
   font-size: 2rem;
   margin-right: 2rem;
   background-color: transparent;
@@ -1481,7 +1481,7 @@ body.dark {
   background-color: #fff;
   border-radius: 15px;
   padding: 0.5rem 1rem;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   color: #000;
   font-size: 1.2rem;
   text-align: left;
@@ -1513,7 +1513,7 @@ body.dark {
   text-align: center;
   margin: 0 0.3rem;
   font-size: 1.4rem;
-  font-family: "ManchetteFine-Regular";
+  font-family: "NotoSerif-Regular";
   border: 1px solid transparent;
   transition: border-color 0.3s ease;
   margin-bottom: 10px;
