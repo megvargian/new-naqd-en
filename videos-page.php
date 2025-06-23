@@ -120,7 +120,7 @@ $next4  = array_slice($video_parts_ids, 10, 4);
             <div class="col-lg-6 col-12 mb-3 px-2">
                 <div class="most-read-articles fade-in">
                     <h2 class="mb-3 mt-3 mb-lg-5 mt-lg-4">
-                        الأكثر مشاهدة
+                        Most viewed
                     </h2>
                     <ul>
                         <?php foreach($top_videos as $video){
@@ -231,7 +231,7 @@ $next4  = array_slice($video_parts_ids, 10, 4);
         <div class="row pt-3">
                 <div class="col-12 mb-3 text-right">
                     <h2>
-                        آخر الأخبار
+                        Latest news
                     </h2>
                 </div>
                 <div class="col-12 position-relative">
