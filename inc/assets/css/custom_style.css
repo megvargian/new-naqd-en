@@ -1129,7 +1129,7 @@ footer .border-green {
   align-items: center;
 }
 .personal-info .wpcf7-list-item input[type=radio] {
-  margin-left: 10px;
+  margin-right: 10px;
   accent-color: #B6E60D;
   width: 17px;
   height: 17px;
