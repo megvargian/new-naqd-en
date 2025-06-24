@@ -312,7 +312,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
         <div class="row pt-lg-5 pt-3">
             <div class="col-12 mb-3 text-right">
                 <h2>
-                    latest news
+                    LATEST NEWS
                 </h2>
             </div>
             <div class="col-12 position-relative">
@@ -431,7 +431,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                     $(this).find('.rassif-description').css({
                         'bottom': '5%',
                         'opacity': '1',
-                        'z-index': '1',
+                        'z-index': '10',
                         'visibility': 'visible'
                     })
                 }, 300);

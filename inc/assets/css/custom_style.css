@@ -724,7 +724,8 @@ p {
   font-size: 5rem;
   color: #000;
   text-align: center;
-  font-family: "NotoSerif-Bold";
+  font-family: "Assistant-Bold";
+  text-transform: uppercase;
 }
 .homepage .most-read-articles ul {
   list-style: none;
@@ -743,7 +744,7 @@ p {
   color: #000;
   font-size: 2.5rem;
   text-align: left;
-  font-family: "Assistant-Bold";
+  font-family: "NotoSerif-Bold";
 }
 .homepage .most-read-articles ul li .author {
   font-size: 0.9rem;
@@ -832,7 +833,7 @@ footer .footer-tags li {
 footer .footer-tags li a {
   font-family: "NotoSerif-Bold";
   color: #fff;
-  font-size: 2rem;
+  font-size: 1.4rem;
   text-align: left;
 }
 footer .footer-tags li:last-child {

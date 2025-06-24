@@ -231,7 +231,7 @@ $top_videos = get_top_3_most_visited('video');
         <div class="row pt-3">
                 <div class="col-12 mb-3 text-right">
                     <h2>
-                        Latest news
+                        LATEST NEWS
                     </h2>
                 </div>
                 <div class="col-12 position-relative">
