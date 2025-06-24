@@ -120,7 +120,7 @@ $top_videos = get_top_3_most_visited('video');
             <div class="col-lg-6 col-12 mb-3 px-2">
                 <div class="most-read-articles fade-in">
                     <h2 class="mb-3 mt-3 mb-lg-5 mt-lg-4">
-                        Most viewed
+                        MOST VIEWED
                     </h2>
                     <ul>
                         <?php foreach($top_videos as $video){
