@@ -298,7 +298,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
             <?php } ?>
         </div>
         <div class="row">
-            <?php foreach ($third_part as $key => $article_id) {
+            <?php foreach ($fourth_part as $key => $article_id) {
                     $article_title = get_the_title($article_id);
                     $image_url = get_the_post_thumbnail_url($article_id);
             ?>
