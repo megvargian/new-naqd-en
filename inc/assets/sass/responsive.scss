@@ -121,11 +121,20 @@
 	}
 	footer{
 		.footer-tags{
+			justify-content: center;
 			li{
 				a{
 					font-size: 1.2rem;
 				}
 			}
+		}
+		p{
+    		font-size: 1.2rem;
+		}
+	}
+	.rassif-section{
+		img{
+			aspect-ratio: 3 / 3.75;
 		}
 	}
 }

@@ -84,8 +84,17 @@
   .categories .tabs li a {
     font-size: 1.5rem;
   }
+  footer .footer-tags {
+    justify-content: center;
+  }
   footer .footer-tags li a {
     font-size: 1.2rem;
+  }
+  footer p {
+    font-size: 1.2rem;
+  }
+  .rassif-section img {
+    aspect-ratio: 3/3.75;
   }
 }
 @media (max-width: 600px) {

@@ -457,6 +457,10 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                 $(this).find('.title').css('opacity', 1);
                 $(this).find('.title').css('z-index', '1');
             });
+        <?php } else { ?>
+            $('.rassif-section').click(function(){
+                window.location.href = '<?php echo get_permalink($get_homepage_fields['second_feature_article']); ?>';
+            })
         <?php } ?>
     })
 </script>

@@ -382,7 +382,7 @@ p{
 			display: block;
 			text-align: center;
 			margin: 0 .3rem;
-			font-size: 1.4rem;
+			font-size: 1.2rem;
 			font-family: $NotoSerif_Regular;
 			border: 1px solid transparent;
 			transition: border-color .3s ease;
@@ -640,7 +640,7 @@ p{
 			font-size: 5rem;
 			color: #000;
 			text-align: center;
-			font-family: $assistant_bold;
+			font-family: $NotoSerif_Bold;
 		}
 		ul{
 			list-style: none;
@@ -747,7 +747,7 @@ footer{
 			border-right: 1px solid #fff;
 			flex: 0 1 auto;
 			a{
-				font-family: $assistant_bold;
+				font-family: $NotoSerif_Bold;
 				color: #fff;
 				font-size: 2rem;
 				text-align: left;
