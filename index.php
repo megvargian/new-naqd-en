@@ -412,6 +412,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
             // for rassif
             $('.rassif-section').on('mouseenter', function() {
                 $(this).find('img').addClass('h-100');
+                $(this).addClass('active');
                 const parentWidth = $('.parent-row-rassif').width() - 8;
                 const parentHeight = $('.parent-row-rassif').height();
 
@@ -438,6 +439,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
             $('.rassif-section').on('mouseleave', function() {
                 // Reset styles (optional – adjust as needed)
                 $(this).find('img').removeClass('h-100');
+                $(this).removeClass('active');
                 $(this).find('.rassif-description').css({
                     'bottom': '-5%',
                     'opacity': '0',
