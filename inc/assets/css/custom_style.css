@@ -1255,6 +1255,9 @@ footer .border-green {
 .categories .tabs li button.active {
   color: #B6E60D;
 }
+.categories h2 {
+  font-size: 3.5rem;
+}
 
 #progressBarContainer {
   position: fixed;
