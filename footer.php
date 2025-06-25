@@ -104,9 +104,9 @@ $main_menu = $get_general_fields['main_menu'];
                 </a>
             </div>
             <div class="col-lg-6 col-12">
-                <div class="d-flex justify-content-end text-right">
+                <div class="d-flex justify-content-end text-right align-items-center">
                     <p>Follow Naqd channel on YouTube</p>
-                    <a class="button-green" href="#">
+                    <a class="button-green" style="height: fit-content;" href="#">
                         Subscribe
                     </a>
                 </div>
