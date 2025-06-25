@@ -22,7 +22,7 @@ $main_menu = $get_general_fields['main_menu'];
             </div>
         </div>
         <div class="row justify-content-between pb-4">
-            <div class="col-lg-5 col-12 justify-content-start d-flex align-items-center">
+            <div class="col-lg-5 col-12 pb-lg-0 pb-4 justify-content-start d-flex align-items-center">
                 <ul class="social-media-icons">
                     <li class="mx-1">
                         <a href="<?php echo $social_media_links['insta']; ?>" class="single-social-icon">
@@ -80,7 +80,7 @@ $main_menu = $get_general_fields['main_menu'];
                     </li>
                 </ul>
             </div>
-            <div class="col-lg-1 col-4">
+            <div class="col-lg-1 col-4 pb-lg-0 pb-2">
                 <a href="<?php echo home_url(); ?>">
                     <img id="naqd_footer" class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/Naqd-logo-white.svg" alt="naqd">
                 </a>
