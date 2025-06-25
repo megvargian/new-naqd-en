@@ -157,7 +157,7 @@ $post_image = wp_get_attachment_url(get_post_thumbnail_id($article_id));
                 <div class="col-lg-4 col-12 border-right-white">
                     <div class="most-read-articles">
                         <h2 class="mb-3">
-                            Most read
+                            MOST READ
                         </h2>
                         <ul>
                             <?php foreach($most_view_articles_top_five as $post){
@@ -187,7 +187,7 @@ $post_image = wp_get_attachment_url(get_post_thumbnail_id($article_id));
                 <div class="col-lg-8 col-12">
                     <div class="more custom-padding">
                         <h2 class="mb-3">
-                            More
+                            MORE
                         </h2>
                         <div class="row">
                             <?php if ( $related_query->have_posts() ) : ?>
