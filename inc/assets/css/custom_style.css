@@ -144,6 +144,7 @@ p {
 .single-article {
   border-radius: 15px;
   aspect-ratio: 3/4;
+  object-fit: cover;
 }
 
 .single-article-video {
