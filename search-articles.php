@@ -17,10 +17,12 @@ $query = new WP_Query($args);
 $categories = get_categories(array(
     'hide_empty' => true
 ));
-// Get all tags
-$tags = get_tags(array(
-    'hide_empty' => true
-));
+// // Get all tags
+// $tags = get_tags(array(
+//     'hide_empty' => true
+// ));
+$get_general_fields = get_fields('options');
+$tags = $get_general_fields['tags'];
 ?>
 <section class="position-relative search-articles" style="z-index: 1;">
     <section class="products-cats pb-sm-5 pb-3">
