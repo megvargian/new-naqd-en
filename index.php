@@ -75,11 +75,11 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                 $limited = implode( ' ', array_slice( $words, 0, 150 ) );
         ?>
             <div class="row bg-color-green mb-2">
-                <div class="col-8 d-lg-flex d-none px-0" <?php if(!isMob()) {?>style="background-color: <?php echo $get_homepage_fields['background_color']; ?>" <?php } ?>>
+                <div class="col-8 d-lg-flex d-none px-0 custom-border-radius" <?php if(!isMob()) {?>style="background-color: <?php echo $get_homepage_fields['background_color']; ?>" <?php } ?>>
                     <div class="d-flex justify-content-between align-items-center flex-column">
                         <div class="p-5 pb-0 text-left">
                             <p style="color: <?php echo $get_homepage_fields['text_color']; ?>">
-                                <?php echo $limited; ?>
+                                <?php echo get_the_excerpt($article_id); ?>
                             </p>
                         </div>
                         <div class="d-flex justify-content-between align-items-center lower-part pb-5 px-5 w-100">
