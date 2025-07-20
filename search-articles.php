@@ -184,7 +184,7 @@ $tags = $get_general_fields['tags'];
         }
         <?php if($search_article){ ?>
             $('.search').val("<?php echo $search_article; ?>");
-            $('.search-form').submit();
+            $('.search-form-filter').submit();
         <?php } ?>
         var page = 1; // Set the initial page number
         // Function to load more posts via AJAX

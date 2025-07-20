@@ -217,7 +217,7 @@ $all_tags = get_tags( array(
 							<form action="/search-articles">
 								<div class="position-relative">
 									<input placeholder="search" type="search" required name="searchArticle">
-									<button>
+									<button type="submit">
 										<img src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/search.svg" alt="search">
 									</button>
 								</div>
