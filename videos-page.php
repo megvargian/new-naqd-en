@@ -132,7 +132,7 @@ $top_videos = get_top_3_most_visited('video');
                         ?>
                             <li>
                                 <h3 class="openPopupMostView" style="cursor: pointer;" data-key="<?php echo $video_id; ?>" data-key-url="<?php echo $video_embed_id; ?>">
-                                    <?php echo $video->post_title; ?>
+                                    <?php echo shorten_title_to_3_words($video->post_title); ?>
                                 </h3>
                                 <div class="author">
                                     <div class="date helvetica-regular">

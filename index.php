@@ -168,7 +168,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                             <li>
                                 <a href="<?php echo get_permalink($post_id);?>">
                                     <h3>
-                                        <?php echo shorten_title_to_4_words($post->post_title); ?>
+                                        <?php echo shorten_title_to_3_words($post->post_title); ?>
                                     </h3>
                                 </a>
                                 <div class="author">
