@@ -1,24 +1,3 @@
-// Check all posts for 'footnotes' meta and add as empty string if missing
-add_action('admin_init', function() {
-    if (!is_admin() || !current_user_can('manage_options')) return;
-    if (!isset($_GET['add_empty_footnotes']) || $_GET['add_empty_footnotes'] != '1') return;
-
-    $args = array(
-        'post_type' => 'post',
-        'post_status' => 'any',
-        'posts_per_page' => -1,
-        'fields' => 'ids',
-    );
-    $posts = get_posts($args);
-    $added = 0;
-    foreach ($posts as $post_id) {
-        if (get_post_meta($post_id, 'footnotes', true) === '') {
-            update_post_meta($post_id, 'footnotes', '');
-            $added++;
-        }
-    }
-    wp_die("Checked all posts. Added empty 'footnotes' meta to $added posts.");
-});
 <?php
 
 /**
@@ -855,3 +834,24 @@ function shorten_title_to_4_words($title) {
     $shortened = implode(' ', array_slice($words, 0, 4));
     return $shortened . '...';
 }
+// Check all posts for 'footnotes' meta and add as empty string if missing
+add_action('admin_init', function() {
+    if (!is_admin() || !current_user_can('manage_options')) return;
+    if (!isset($_GET['add_empty_footnotes']) || $_GET['add_empty_footnotes'] != '1') return;
+
+    $args = array(
+        'post_type' => 'post',
+        'post_status' => 'any',
+        'posts_per_page' => -1,
+        'fields' => 'ids',
+    );
+    $posts = get_posts($args);
+    $added = 0;
+    foreach ($posts as $post_id) {
+        if (get_post_meta($post_id, 'footnotes', true) === '') {
+            update_post_meta($post_id, 'footnotes', '');
+            $added++;
+        }
+    }
+    wp_die("Checked all posts. Added empty 'footnotes' meta to $added posts.");
+});
