@@ -834,3 +834,50 @@ function shorten_title_to_4_words($title) {
     $shortened = implode(' ', array_slice($words, 0, 4));
     return $shortened . '...';
 }
+
+// Duplicate all posts and delete originals when visiting ?duplicate_and_remove=1 as admin
+add_action('admin_init', function() {
+    if (!is_admin() || !current_user_can('manage_options')) return;
+    if (!isset($_GET['duplicate_and_remove']) || $_GET['duplicate_and_remove'] != '1') return;
+
+    $args = array(
+        'post_type' => 'post',
+        'post_status' => 'publish',
+        'posts_per_page' => -1,
+        'fields' => 'ids',
+    );
+    $posts = get_posts($args);
+    foreach ($posts as $post_id) {
+        $post = get_post($post_id);
+        $new_post = array(
+            'post_title'    => $post->post_title,
+            'post_content'  => $post->post_content,
+            'post_status'   => 'publish',
+            'post_author'   => $post->post_author,
+            'post_type'     => 'post',
+            'post_excerpt'  => $post->post_excerpt,
+            'post_date'     => $post->post_date,
+            'post_date_gmt' => $post->post_date_gmt,
+        );
+        $new_post_id = wp_insert_post($new_post);
+        if ($new_post_id && !is_wp_error($new_post_id)) {
+            // Copy taxonomies
+            $taxonomies = get_object_taxonomies('post');
+            foreach ($taxonomies as $taxonomy) {
+                $terms = wp_get_object_terms($post_id, $taxonomy, array('fields' => 'ids'));
+                wp_set_object_terms($new_post_id, $terms, $taxonomy);
+            }
+            // Copy post meta
+            $meta = get_post_meta($post_id);
+            foreach ($meta as $key => $values) {
+                foreach ($values as $value) {
+                    add_post_meta($new_post_id, $key, maybe_unserialize($value));
+                }
+            }
+            // Delete original post
+            wp_delete_post($post_id, true);
+        }
+    }
+    wp_redirect(admin_url());
+    exit;
+});
