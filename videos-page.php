@@ -234,56 +234,59 @@ $top_videos = get_top_3_most_visited('video');
                         LATEST NEWS
                     </h2>
                 </div>
-                <div class="col-12 position-relative">
+                <!-- <div class="col-12 position-relative">
                     <div class="swiper latestNewsSwiper">
                         <div class="swiper-wrapper">
-                            <?php for($i=0; $i<8; $i++){ ?>
+                            <?php //for($i=0; $i<8; $i++){ ?>
                                 <div class="swiper-slide">
                                     <a href="#" class="fade-in">
-                                        <img class="w-100 d-block single-article " src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
+                                        <img class="w-100 d-block single-article " src="<?php //echo get_template_directory_uri(); ?>/inc/assets/images/berry.jpg" alt="berry">
                                     </a>
                                 </div>
-                            <?php } ?>
+                            <?php //} ?>
                         </div>
                     </div>
                     <div class="swiper-button-prev swiper-button-prev-latest-article"></div>
+                </div> -->
+                <div class="col-12">
+                    <?php echo do_shortcode('[instagram-feed feed=1]');?>
                 </div>
             </div>
         </div>
 </section>
 <script>
     jQuery(document).ready(function($) {
-        var swiper = new Swiper(".latestNewsSwiper", {
-            slidesPerView: 4,
-            spaceBetween: 16,
-            grabCursor: true,
-            loop: true,
-            navigation: {
-                nextEl: ".swiper-button-prev",
-            },
-            breakpoints: {
-				// when window width is >= 320px
-				320: {
-					slidesPerView: 1.5,
-					spaceBetween: 10,
-				},
-				// when window width is >= 480px
-				480: {
-					slidesPerView: 1.5,
-					spaceBetween: 10,
-				},
-				// when window width is >= 640px
-				640: {
-					slidesPerView: 2,
-					spaceBetween: 10,
-				},
-				991: {
-					slidesPerView: 4,
-					spaceBetween: 16,
-				}
-			}
-        });
-        swiper.changeLanguageDirection('rtl');
+        // var swiper = new Swiper(".latestNewsSwiper", {
+        //     slidesPerView: 4,
+        //     spaceBetween: 16,
+        //     grabCursor: true,
+        //     loop: true,
+        //     navigation: {
+        //         nextEl: ".swiper-button-prev",
+        //     },
+        //     breakpoints: {
+		// 		// when window width is >= 320px
+		// 		320: {
+		// 			slidesPerView: 1.5,
+		// 			spaceBetween: 10,
+		// 		},
+		// 		// when window width is >= 480px
+		// 		480: {
+		// 			slidesPerView: 1.5,
+		// 			spaceBetween: 10,
+		// 		},
+		// 		// when window width is >= 640px
+		// 		640: {
+		// 			slidesPerView: 2,
+		// 			spaceBetween: 10,
+		// 		},
+		// 		991: {
+		// 			slidesPerView: 4,
+		// 			spaceBetween: 16,
+		// 		}
+		// 	}
+        // });
+        // swiper.changeLanguageDirection('rtl');
         $('.openPopup').click(function(){
             let key = $(this).attr('data-key');
             let embedKey = $(this).attr('data-key-url');
