@@ -834,3 +834,15 @@ function shorten_title_to_4_words($title) {
     $shortened = implode(' ', array_slice($words, 0, 4));
     return $shortened . '...';
 }
+
+function my_register_footnotes_meta() {
+    register_post_meta( 'authors', 'footnotes', array(
+        'type'         => 'string',
+        'single'       => true,
+        'show_in_rest' => true, // crucial for Gutenberg/API updates
+        'auth_callback' => function() {
+            return current_user_can( 'edit_posts' );
+        },
+    ) );
+}
+add_action( 'init', 'my_register_footnotes_meta' );
