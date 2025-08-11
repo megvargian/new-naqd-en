@@ -825,3 +825,12 @@ function add_counter_view_video() {
 }
 add_action('wp_ajax_add_counter_view_video', 'add_counter_view_video');
 add_action('wp_ajax_nopriv_add_counter_view_video', 'add_counter_view_video');
+
+function shorten_title_to_4_words($title) {
+    $words = preg_split('/\s+/', trim($title));
+    if (count($words) <= 4) {
+        return $title;
+    }
+    $shortened = implode(' ', array_slice($words, 0, 4));
+    return $shortened . '...';
+}
