@@ -836,13 +836,14 @@ function shorten_title_to_4_words($title) {
 }
 
 function my_register_footnotes_meta() {
-    register_post_meta( 'author', 'footnotes', array(
-        'type'         => 'string',
-        'single'       => true,
-        'show_in_rest' => true, // crucial for Gutenberg/API updates
-        'auth_callback' => function() {
+    register_post_meta( 'author', 'footnotes', [
+        'type'              => 'string',
+        'single'            => true,
+        'show_in_rest'      => true,
+        'default'           => '', // This ensures a value exists when missing
+        'auth_callback'     => function() {
             return current_user_can( 'edit_posts' );
         },
-    ) );
+    ] );
 }
 add_action( 'init', 'my_register_footnotes_meta' );
