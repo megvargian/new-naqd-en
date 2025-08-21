@@ -257,9 +257,12 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
         </div>
         <div class="row parent-row-rassif">
             <div class="col-lg-6 col-12 mb-2 px-1">
-                <?php $second_feature_title = get_the_title($get_homepage_fields['second_feature_article']); ?>
+                <?php
+                    $second_feature_title = get_the_title($get_homepage_fields['second_feature_article']);
+                    $image_url = get_the_post_thumbnail_url($get_homepage_fields['second_feature_article']);
+                ?>
                 <div class="rassif-section fade-in">
-                    <img class="w-100 d-block" src="<?php echo get_template_directory_uri(); ?>/inc/assets/images/rassif-2.jpg" alt="rassif">
+                    <img class="w-100 d-block" src="<?php echo $image_url; ?>" alt="<?php echo $second_feature_title; ?>">
                     <div class="title title-padding">
                         <h2><?php echo $second_feature_title; ?></h2>
                     </div>
