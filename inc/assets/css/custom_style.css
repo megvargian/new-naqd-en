@@ -1246,6 +1246,9 @@ footer .border-green {
   display: block;
 }
 
+.categories .tabs {
+  flex-wrap: wrap;
+}
 .categories .tabs li button {
   color: #fff;
   font-family: "Assistant-Bold";

@@ -188,6 +188,9 @@
   .categories .tabs li a {
     margin-left: 1.5rem;
   }
+  .categories .tabs li button {
+    font-size: 1.2rem;
+  }
 }
 @media (min-width: 1390px) {
   /* change this, by default 1140px */
