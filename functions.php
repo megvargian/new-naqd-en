@@ -583,7 +583,7 @@ function load_filtered_articles() {
 
     if (isset($selectedCategories) && isset($selectedTags) && isset($search) && !empty($date)){
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             's'              => $search,
             'tax_query'      => array(
@@ -609,21 +609,21 @@ function load_filtered_articles() {
         );
     } else if (isset($selectedCategories) && isset($search)) {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             's'              => $search,
             'category__in'   => $selectedCategories,
         );
     } else if (isset($selectedTags) && isset($search)) {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             's'              => $search,
             'tag__in' => $selectedTags,
         );
     } else if (isset($selectedCategories) && isset($selectedTags)) {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             'tax_query'      => array(
                 'relation' => 'AND',
@@ -641,25 +641,25 @@ function load_filtered_articles() {
         );
     } else if (isset($selectedCategories)) {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             'category__in' => $selectedCategories,
         );
     } else if (isset($selectedTags)) {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             'tag__in' => $selectedTags,
         );
     } else if (isset($search)){
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
             's'              => $search,
         );
     } else {
         $args = array(
-            'post_type'      => 'post',
+            'post_type'      => array('post', 'video'),
             'posts_per_page' =>  -1,
         );
     }
@@ -667,7 +667,7 @@ function load_filtered_articles() {
         $timestamp = strtotime($date);
         $formatted_date = date('F jS, Y', $timestamp);
         $args = array(
-            'post_type' => 'post',
+            'post_type' => array('post', 'video'),
             'posts_per_page' => -1,
             'date_query' => array(
                 array(
@@ -687,7 +687,40 @@ function load_filtered_articles() {
                 $article_id = get_the_ID();
                 $article_title = get_the_title($article_id);
                 $image_url = get_the_post_thumbnail_url($article_id);
+                $post_type = get_post_type($article_id);
                 $count++;
+
+                if ($post_type == 'video') {
+                    $url = get_field('youtube_url', $article_id);
+                    $path = parse_url($url, PHP_URL_PATH);
+                    $parts = explode('/', $path);
+                    $video_embed_id = end($parts);
+        ?>
+            <div class="col-lg-3 col-12 mb-2 px-1">
+                <div class="openPopup <?php echo $count > 8 ? 'fade-in' : ''?>" data-key="<?php echo $article_id; ?>" data-key-url="<?php echo $video_embed_id; ?>">
+                    <img class="w-100 d-block single-article-video" style="cursor: pointer;" src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
+                    <img class="arrow-play" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/play.ico" alt="play">
+                </div>
+                <div class="overlay videoOverlay-<?php echo $article_id; ?>">
+                    <div class="position-relative w-100 h-100">
+                        <div class="popup">
+                            <button class="close-btn" data-key="<?php echo $article_id; ?>">
+                                <span aria-hidden="true">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff"><path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"/></svg>
+                                </span>
+                            </button>
+                            <iframe
+                                    frameborder="0"
+                                    width="360" height="640"
+                                    allowfullscreen
+                                    allow="autoplay; encrypted-media">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php
+                } else {
         ?>
             <div class="col-lg-3 col-12 mb-2 px-1">
                 <a href="<?php echo get_permalink($article_id);?>" class="<?php echo $count > 8 ? 'fade-in' : ''?>">
@@ -695,6 +728,7 @@ function load_filtered_articles() {
                 </a>
             </div>
         <?php
+                }
             }
         }
         wp_reset_postdata();
@@ -709,7 +743,7 @@ add_action('wp_ajax_nopriv_load_filtered_articles', 'load_filtered_articles');
 function load_more_products() {
     $paged = isset($_POST['page']) ? intval($_POST['page']) : 1; // Start with page 2 for the next load
     $args = array(
-        'post_type' 		=> 		'post',
+        'post_type' 		=> 		array('post', 'video'),
         'posts_per_page'    => 		12,
         'order'             =>      'DESC',
 		'post_status'    	=> 		'publish',
@@ -722,7 +756,40 @@ function load_more_products() {
             $article_id = get_the_ID();
             $article_title = get_the_title($article_id);
             $image_url = get_the_post_thumbnail_url($article_id);
+            $post_type = get_post_type($article_id);
             $count++;
+
+            if ($post_type == 'video') {
+                $url = get_field('youtube_url', $article_id);
+                $path = parse_url($url, PHP_URL_PATH);
+                $parts = explode('/', $path);
+                $video_embed_id = end($parts);
+        ?>
+        <div class="col-lg-3 col-12 mb-2 px-1">
+            <div class="openPopup <?php echo $count > 8 ? 'fade-in' : ''?>" data-key="<?php echo $article_id; ?>" data-key-url="<?php echo $video_embed_id; ?>">
+                <img class="w-100 d-block single-article-video" style="cursor: pointer;" src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
+                <img class="arrow-play" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/play.ico" alt="play">
+            </div>
+            <div class="overlay videoOverlay-<?php echo $article_id; ?>">
+                <div class="position-relative w-100 h-100">
+                    <div class="popup">
+                        <button class="close-btn" data-key="<?php echo $article_id; ?>">
+                            <span aria-hidden="true">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff"><path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"/></svg>
+                            </span>
+                        </button>
+                        <iframe
+                                frameborder="0"
+                                width="360" height="640"
+                                allowfullscreen
+                                allow="autoplay; encrypted-media">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <?php
+            } else {
         ?>
         <div class="col-lg-3 col-12 mb-2 px-1">
             <a href="<?php echo get_permalink($article_id);?>" class="<?php echo $count > 8 ? 'fade-in' : ''?>">
@@ -730,6 +797,7 @@ function load_more_products() {
             </a>
         </div>
         <?php
+            }
         }
     }
     wp_reset_postdata();

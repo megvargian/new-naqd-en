@@ -7,7 +7,7 @@ if(isset($_GET['searchArticle'])){
     $search_article = $_GET['searchArticle'];
 }
 $args = array(
-    'post_type'      => 'post',
+    'post_type'      => array('post', 'video'),
     'posts_per_page' =>  8,
     'orderby'        => 'date',
     'order'          => 'DESC',
@@ -87,7 +87,40 @@ $tags = $get_general_fields['tags'];
                             $article_id = get_the_ID();
                             $article_title = get_the_title($article_id);
                             $image_url = get_the_post_thumbnail_url($article_id);
+                            $post_type = get_post_type($article_id);
                             $count++;
+
+                            if ($post_type == 'video') {
+                                $url = get_field('youtube_url', $article_id);
+                                $path = parse_url($url, PHP_URL_PATH);
+                                $parts = explode('/', $path);
+                                $video_embed_id = end($parts);
+                    ?>
+                        <div class="col-lg-3 col-12 mb-2 px-1">
+                            <div class="openPopup <?php echo $count > 8 ? 'fade-in' : ''?>" data-key="<?php echo $article_id; ?>" data-key-url="<?php echo $video_embed_id; ?>">
+                                <img class="w-100 d-block single-article-video" style="cursor: pointer;" src="<?php echo $image_url; ?>" alt="<?php echo $article_title; ?>">
+                                <img class="arrow-play" src="<?php echo get_template_directory_uri(); ?>/inc/assets/icons/play.ico" alt="play">
+                            </div>
+                            <div class="overlay videoOverlay-<?php echo $article_id; ?>">
+                                <div class="position-relative w-100 h-100">
+                                    <div class="popup">
+                                        <button class="close-btn" data-key="<?php echo $article_id; ?>">
+                                            <span aria-hidden="true">
+                                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="#fff"><path d="M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z"/></svg>
+                                            </span>
+                                        </button>
+                                        <iframe
+                                                frameborder="0"
+                                                width="360" height="640"
+                                                allowfullscreen
+                                                allow="autoplay; encrypted-media">
+                                        </iframe>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <?php
+                            } else {
                     ?>
                         <div class="col-lg-3 col-12 mb-2 px-1">
                             <a href="<?php echo get_permalink($article_id);?>" class="<?php echo $count > 8 ? 'fade-in' : ''?>">
@@ -95,6 +128,7 @@ $tags = $get_general_fields['tags'];
                             </a>
                         </div>
                     <?php
+                            }
                         }
                         wp_reset_postdata();
                     }
@@ -111,6 +145,44 @@ $tags = $get_general_fields['tags'];
 </section>
 <script>
     jQuery(document).ready(function($) {
+        // Video popup functionality
+        $('.openPopup').click(function(){
+            let key = $(this).attr('data-key');
+            let embedKey = $(this).attr('data-key-url');
+            <?php if(isMob()){ ?>
+                window.location.href = 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1';
+            <?php } else { ?>
+                $('.videoOverlay-' + key).css('display', 'block');
+                $('.videoOverlay-' + key).find('iframe').attr('src', 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1');
+                $('html, body').addClass('hide_scroll');
+            <?php } ?>
+            //add counter in db
+            addCounterViewForVideo(key);
+        });
+        $('.close-btn').click(function(){
+            var key = $(this).attr('data-key');
+            $('.videoOverlay-' + key).css('display', 'none');
+            $('.videoOverlay-' + key).find('iframe').attr('src', '');
+            $('html, body').removeClass('hide_scroll');
+        });
+        function addCounterViewForVideo(videoId) {
+            $.ajax({
+                type: 'POST',
+                url: '<?php echo admin_url('admin-ajax.php'); ?>',
+                data: {
+                    action: 'add_counter_view_video',
+                    id: videoId,
+                },
+                success: function(response) {
+                    console.log('view', videoId)
+                },
+                error: function(error) {
+                    console.error(error)
+                },
+            });
+        }
+
+        // Date filter
         $('input[type="date"]').on('change', function() {
             var activeCats = [];
             var activeTags = [];
