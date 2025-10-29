@@ -872,6 +872,11 @@ footer .border-green {
 .single-product-page .main-img {
   border-radius: 15px;
 }
+.single-product-page h1 {
+  font-family: "Assistant-Bold";
+  color: #B6E60D;
+  font-size: 2.5rem;
+}
 .single-product-page .author-section {
   display: flex;
   justify-content: start;

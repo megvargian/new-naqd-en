@@ -50,6 +50,7 @@ $post_image = wp_get_attachment_url(get_post_thumbnail_id($article_id));
         <div class="row justify-content-center pt-3">
             <div class="col-xxxl-5 col-xxl-4 col-lg-6 col-md-8 col-12">
                 <img class="w-100 d-block main-img" src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php echo $title; ?>">
+                <h1 class="py-md-4 py-3"><?php echo $title; ?></h1>
                 <div class="justify-content-between align-items-center lower-part py-2 w-100">
                     <div class="like-container">
                         <p class="helvetica-regular" dir="ltr">

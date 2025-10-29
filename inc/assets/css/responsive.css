@@ -99,6 +99,9 @@
   .rassif-section img {
     aspect-ratio: 3/3.75;
   }
+  .single-product-page h1 {
+    font-size: 2rem;
+  }
 }
 @media (max-width: 600px) {
   .homepage .most-read-articles h2 {
@@ -118,6 +121,9 @@
   }
   .most-read-articles ul li::before {
     line-height: 1.55;
+  }
+  .single-product-page h1 {
+    font-size: 1.5rem;
   }
   .single-product-page .related-articles .most-read-articles ul li h3 {
     font-size: 1.5rem;

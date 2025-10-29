@@ -138,6 +138,11 @@
 		}
 		height: auto;
 	}
+	.single-product-page{
+		h1{
+			font-size: 2rem;
+		}
+	}
 }
 
 @media (max-width: 600px){
@@ -175,6 +180,9 @@
 		}
 	}
 	.single-product-page{
+		h1{
+			font-size: 1.5rem;
+		}
 		.related-articles{
 			.most-read-articles{
 				ul{
