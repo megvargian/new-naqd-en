@@ -949,3 +949,59 @@ add_action('admin_init', function() {
     wp_redirect(admin_url());
     exit;
 });
+
+// Fix for "Could not update the meta value of footnotes in database" error
+// This prevents WordPress from trying to save the footnotes meta field
+add_filter('is_protected_meta', function($protected, $meta_key) {
+    if ($meta_key === 'footnotes') {
+        return true; // Mark as protected so WP won't try to save it via REST API
+    }
+    return $protected;
+}, 10, 2);
+
+// Alternative: Disable footnotes feature entirely if not needed
+add_filter('excerpt_remove_footnotes', '__return_false');
+
+// Clean up any corrupted footnotes meta on save
+add_action('save_post', function($post_id) {
+    // Avoid autosave and revisions
+    if (wp_is_post_autosave($post_id) || wp_is_post_revision($post_id)) {
+        return;
+    }
+
+    // Only for posts (not other post types unless needed)
+    if (get_post_type($post_id) !== 'post') {
+        return;
+    }
+
+    // Get the current footnotes meta
+    $footnotes = get_post_meta($post_id, 'footnotes', true);
+
+    // If it's empty or doesn't exist, set it to empty string
+    if (empty($footnotes) || $footnotes === false) {
+        delete_post_meta($post_id, 'footnotes');
+        add_post_meta($post_id, 'footnotes', '', true);
+    }
+}, 10, 1);
+
+// Fix footnotes meta field to prevent REST API errors
+add_action('rest_api_init', function() {
+    register_rest_field('post', 'footnotes', array(
+        'get_callback' => function($post) {
+            $footnotes = get_post_meta($post['id'], 'footnotes', true);
+            return $footnotes ? $footnotes : '';
+        },
+        'update_callback' => function($value, $post) {
+            if (empty($value)) {
+                $value = '';
+            }
+            update_post_meta($post->ID, 'footnotes', $value);
+            return true;
+        },
+        'schema' => array(
+            'type' => 'string',
+            'description' => 'Footnotes for the post',
+            'context' => array('view', 'edit'),
+        ),
+    ));
+});
