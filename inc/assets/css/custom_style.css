@@ -936,9 +936,10 @@ footer .border-green {
 }
 .single-product-page .lower-part p {
   font-family: "NotoSerif-Regular";
-  font-size: 0.9rem;
+  font-size: 1rem;
   color: #fff;
   margin-bottom: 0;
+  margin-left: 4px;
 }
 .single-product-page .lower-part .heart, .single-product-page .lower-part .heart-filled {
   width: 15px;
@@ -1360,6 +1361,9 @@ footer .border-green {
 }
 .light-theme .slider .label-text {
   background-color: #5D0EE6;
+}
+.light-theme .single-product-page h1 {
+  color: #5D0DE6;
 }
 .light-theme .single-product-page .tags h3 {
   color: #5D0DE6;

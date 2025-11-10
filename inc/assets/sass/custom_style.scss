@@ -869,9 +869,10 @@ footer{
 		}
 		p{
 			font-family: $NotoSerif_Regular;
-			font-size: .9rem;
+			font-size: 1rem;
 			color: #fff;
 			margin-bottom: 0;
+			margin-left: 4px;
 		}
 		.heart, .heart-filled{
 			width: 15px;
@@ -1298,6 +1299,9 @@ background: rgba(0,0,0,0.6);
 		background-color: #5D0EE6;
 	}
 	.single-product-page{
+		h1{
+			color: #5D0DE6;
+		}
 		.tags{
 			h3 {
 				color: #5D0DE6;
