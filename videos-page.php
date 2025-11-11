@@ -287,25 +287,6 @@ $top_videos = get_top_3_most_visited('video');
 		// 	}
         // });
         // swiper.changeLanguageDirection('rtl');
-        $('.openPopup').click(function(){
-            let key = $(this).attr('data-key');
-            let embedKey = $(this).attr('data-key-url');
-            <?php if(isMob()){ ?>
-                window.location.href = 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1';
-            <?php } else { ?>
-                $('.videoOverlay-' + key).css('display', 'block');
-                $('.videoOverlay-' + key).find('iframe').attr('src', 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1');
-		        $('html, body').addClass('hide_scroll');
-            <?php } ?>
-            //add counter in db
-            addCounterViewForVideo(key);
-        });
-        $('.close-btn').click(function(){
-            var key = $(this).attr('data-key');
-            $('.videoOverlay-' + key).css('display', 'none');
-            $('.videoOverlay-' + key).find('iframe').attr('src', '');
-		    $('html, body').removeClass('hide_scroll');
-        });
         // for most view videos
         $('.openPopupMostView').click(function(){
             let key = $(this).attr('data-key');
@@ -358,6 +339,29 @@ $top_videos = get_top_3_most_visited('video');
 			}
         });
         swiper.changeLanguageDirection('rtl');
+
+        // Use event delegation for dynamically loaded videos
+        $(document).on('click', '.openPopup', function(){
+            let key = $(this).attr('data-key');
+            let embedKey = $(this).attr('data-key-url');
+            <?php if(isMob()){ ?>
+                window.location.href = 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1';
+            <?php } else { ?>
+                $('.videoOverlay-' + key).css('display', 'block');
+                $('.videoOverlay-' + key).find('iframe').attr('src', 'https://www.youtube.com/embed/'+embedKey+'?autoplay=1');
+                $('html, body').addClass('hide_scroll');
+            <?php } ?>
+            //add counter in db
+            addCounterViewForVideo(key);
+        });
+
+        $(document).on('click', '.close-btn', function(){
+            var key = $(this).attr('data-key');
+            $('.videoOverlay-' + key).css('display', 'none');
+            $('.videoOverlay-' + key).find('iframe').attr('src', '');
+            $('html, body').removeClass('hide_scroll');
+        });
+
         $('.single-video-tag').click(function() {
             $(this).toggleClass('active');
             var activeTags = [];

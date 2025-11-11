@@ -483,7 +483,13 @@ function filter_videos_based_tags() {
             'posts_per_page' =>  -1,
             'orderby'        => 'date',
             'order'          => 'DESC',
-            'tag__in'        => $tags_video_ids,
+            'tax_query'      => array(
+                array(
+                    'taxonomy' => 'post_tag',
+                    'field'    => 'term_id',
+                    'terms'    => $tags_video_ids,
+                ),
+            ),
         )
     );
     ?>
