@@ -313,8 +313,8 @@ $top_videos = get_top_3_most_visited('video');
             grabCursor: true,
             loop: true,
             navigation: {
-                nextEl: ".swiper-button-prev-main-cat",
-                prevEl: ".swiper-button-next-main-cat",
+                nextEl: ".swiper-button-next-main-cat",
+                prevEl: ".swiper-button-prev-main-cat",
             },
             breakpoints: {
 				// when window width is >= 320px
@@ -338,7 +338,7 @@ $top_videos = get_top_3_most_visited('video');
 				}
 			}
         });
-        swiper.changeLanguageDirection('rtl');
+        swiperMainCat.changeLanguageDirection('rtl');
 
         // Use event delegation for dynamically loaded videos
         $(document).on('click', '.openPopup', function(){
