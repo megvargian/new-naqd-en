@@ -93,11 +93,11 @@
   footer p {
     font-size: 1.2rem;
   }
-  .rassif-section {
-    height: auto;
-  }
   .rassif-section img {
     aspect-ratio: 3/3.75;
+  }
+  .rassif-section {
+    height: auto;
   }
   .single-product-page h1 {
     font-size: 2rem;
