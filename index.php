@@ -203,7 +203,7 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                 <div class="row">
                     <div class="col-12 mb-2 px-1">
                         <div class="subscribe fade-in">
-                            <h4>Cut through the noise <br> NAQD in your inbox</h4>
+                            <h4>Cut through the noise NAQD in your inbox</h4>
                             <form  action="/">
                                 <input class="email" type="email" placeholder="Your email" required>
                                 <button class="submit">Subscribe</button>
