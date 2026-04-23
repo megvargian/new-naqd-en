@@ -202,8 +202,8 @@ $fourth_part = array_slice($main_part_ids, 14, 8);
                 </div>
                 <div class="row">
                     <div class="col-12 mb-2 px-1">
-                        <div class="subscribe" class="fade-in">
-                            <h4>To receive the Criticism newsletter in your email</h4>
+                        <div class="subscribe fade-in">
+                            <h4>Cut through the noise <br> NAQD in your inbox</h4>
                             <form  action="/">
                                 <input class="email" type="email" placeholder="Your email" required>
                                 <button class="submit">Subscribe</button>
